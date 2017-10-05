@@ -1,0 +1,52 @@
+.about {
+  padding: rem-calc(80) rem-calc(10) rem-calc(58);
+  background-color: $white;
+  .sectionTitle {
+    margin: rem-calc(-10) 0 rem-calc(40);
+  }
+  p {
+    margin-bottom: rem-calc(22);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(21, 15);
+  }
+}
+
+.aboutSlider {
+  margin-top: rem-calc(46);
+  .arrow {
+    &.prev {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+  }
+}
+
+.mapContainer {
+  position: relative;
+  display: block;
+  max-width: rem-calc(944);
+}
+
+.map {
+  width: 100%;
+  height: rem-calc(536);
+}
+
+.mapInfo {
+  position: absolute;
+  bottom: rem-calc(22);
+  left: 1rem;
+  padding: rem-calc(25);
+  font-weight: 600;
+  background-color: rgba($white, .75);
+  .title {
+    margin-bottom: rem-calc(30);
+  }
+  .icon {
+    margin-bottom: rem-calc(20);
+    max-width: rem-calc(84);
+    max-height: rem-calc(76);
+  }
+}

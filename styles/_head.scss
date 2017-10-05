@@ -1,0 +1,56 @@
+.head {
+  .title {
+    font-size: rem-calc(20);
+    font-weight: 600;
+  }
+  .info {
+    max-width: rem-calc(300);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(19, 15);
+  }
+  .callback {
+    line-height: unitless-calc(19);
+    font-weight: 600;
+  }
+}
+
+.headTop {
+  color: $white;
+  background-color: $primary-color;
+}
+
+.titleBar {
+  justify-content: space-between;
+  .toggle {
+    margin-top: rem-calc(10);
+    outline-color: transparent;
+  }
+}
+
+.headMenu {
+  margin: 0 rem-calc(-4);
+  padding: 1rem; 
+  font-size: rem-calc(13);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  a {
+    padding: rem-calc(10) rem-calc(4); 
+    text-decoration: underline;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.headBottom {
+  padding: rem-calc(32) 0 rem-calc(26);
+  background-color: $white;
+}
+
+.logo {
+  display: block;
+  width: rem-calc(180);
+  max-width: rem-calc(126);
+}

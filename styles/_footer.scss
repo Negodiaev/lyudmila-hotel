@@ -1,0 +1,51 @@
+.footer {
+  padding: rem-calc(41) 0;
+  color: $white;
+  a {
+    font-size: rem-calc(15);
+    color: inherit;
+  }
+  .infoTitle,
+  .address {
+    font-size: rem-calc(20);
+    font-weight: 600;
+  }
+  .phone {
+    font-size: rem-calc(30);
+    line-height: unitless-calc(54, 39);
+    font-weight: 300;
+  }
+  .address {
+    margin-top: rem-calc(32);
+  }
+  .booking {
+    margin: 0 rem-calc(-10) rem-calc(40);
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    .title {
+      margin-bottom: rem-calc(42);
+    }
+    .button {
+      margin: rem-calc(10) 0 rem-calc(14);
+    }
+  }
+  .button {
+    color: $body-font-color;
+    background-color: $white;
+  }
+}
+
+.scl {
+  margin-top: rem-calc(44);
+  li {
+    margin-right: rem-calc(15);
+  }
+  a {
+    padding: 0;
+  }
+  .icon {
+    width: rem-calc(50);
+    height: rem-calc(50);
+  }
+}

@@ -1,0 +1,100 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  bottom: 0;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+svg {
+  &.icon {
+    max-width: 100%;
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+.button {
+  width: rem-calc(260);
+  max-width: 100%;
+  height: rem-calc(50);
+  outline-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .04em;
+  &.small {
+    width: rem-calc(180);
+    height: rem-calc(40);
+    line-height: inherit;
+  }
+}
+
+.backgroundFull {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundRepeat {
+  background-repeat: repeat;
+}
+
+.spriteContainer {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.rippleBorder {
+  position: relative;
+  &.top {
+    &:before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+    }
+    &.white {
+      &:before {
+        @include ripple-border(transparent, $white, 22px, 40px);
+      }
+    }
+    &.bodyBackground {
+      &:before {
+        @include ripple-border(transparent, $body-background, 22px, 40px);
+      }
+    }
+    &.reverse {
+      &:before {
+        top: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.bottom {
+    &.white {
+      &:after {
+        @include ripple-border(transparent, $white, 22px, 40px);
+      }
+    }
+    &.bodyBackground {
+      &:after {
+        @include ripple-border(transparent, $body-background, 22px, 40px);
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      transform: rotate(180deg);
+    }
+  }
+}

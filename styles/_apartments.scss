@@ -1,0 +1,92 @@
+.apartments {
+  padding: rem-calc(90) 0 rem-calc(94);
+}
+
+.apartment {
+  margin-bottom: 2rem;
+  padding: rem-calc(10) 0;
+  border: 1px solid #e5e5e5;
+  background-color: $white;
+}
+
+.apartmentGallery {
+  .row {
+    margin: 0;
+  }
+  .apartmentThumbnail {
+    &.slick-slide {
+      position: relative;
+      margin: rem-calc(3);
+      width: rem-calc(83);
+      height: rem-calc(63);
+      border: none;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($white, .75);
+      }
+      &.slick-current {
+        box-shadow: inset 0 0 0 3px $primary-color;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.apartmentThumbnails,
+.apartmentPhoto {
+  overflow: hidden;
+  padding: 0 rem-calc(10);
+}
+
+.apartmentThumbnails {
+  margin: rem-calc(3) 0;
+}
+
+.apartmentContent {
+  padding: 0 rem-calc(10)
+}
+
+.apartmentInfo,
+.apartmentBooking {
+  margin-top: rem-calc(15);
+  margin-bottom: rem-calc(15);
+
+}
+
+.apartmentInfo {
+  padding-right: rem-calc(20);
+  .title {
+    margin-bottom: rem-calc(30);
+  }
+  .titleLink {
+    color: $black;
+  }
+  .description {
+    max-width: rem-calc(510);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(24, 15);
+  }
+}
+
+.apartmentBooking {
+  .price {
+    margin-bottom: rem-calc(20);
+    font-size: rem-calc(25);
+  }
+  .priceCurrency {
+    font-size: rem-calc(16);
+  }
+  .button {
+    margin: 0 rem-calc(7) 0 0;
+  }
+}

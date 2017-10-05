@@ -1,0 +1,57 @@
+.slider {
+  position: relative;
+  &.withArrows {
+    .arrow {
+      padding: rem-calc(6) rem-calc(8) rem-calc(10);
+      font-size: rem-calc(30);
+      font-weight: 600;
+      background-color: rgba($white, .8);
+      &.prev {
+        left: 0;
+        border-radius: 0 rem-calc(30) rem-calc(30) 0;
+      }
+      &.next {
+        right: 0;
+        border-radius: rem-calc(30) 0 0 rem-calc(30);
+      }
+    }
+  }
+  &.withDots {
+    .dots {
+      position: absolute;
+      left: 50%;
+      margin: 0;
+      list-style: none;
+      font-size: 0;
+      transform: translateX(-50%);
+      li {
+        display: inline-block;
+        margin: 0 rem-calc(5);
+        font-size: 1rem;
+        &.slick-active {
+          button {
+            border-color: $white;
+            background-color: $primary-color;
+          }
+        }
+        button {
+          overflow: hidden;
+          width: rem-calc(15);
+          height: rem-calc(15);
+          border: 2px solid $primary-color;
+          border-radius: 50%;
+          outline-color: transparent;
+          text-indent: 10rem;
+          background-color: $white;
+        }
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    outline-color: transparent;
+    transform: translateY(-50%);
+  }
+}

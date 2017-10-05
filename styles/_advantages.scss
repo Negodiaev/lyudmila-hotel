@@ -1,0 +1,49 @@
+.advantages {
+  padding: rem-calc(95) 0 rem-calc(70);
+  background-position: 50% 0;
+  .sectionTitle {
+    margin-bottom: rem-calc(70);
+  }
+}
+
+.advantage {
+  padding: rem-calc(46) 0;
+  border: 1px solid #ebebeb;
+  background-color: rgba($white, .61);
+  .title {
+    font-weight: 700;
+  }
+}
+
+.advantageContent {
+  position: relative;
+  padding: 0 rem-calc(15) 0 rem-calc(100);
+  .icon {
+    position: absolute;
+    top: 0;
+    left: rem-calc(20);
+    max-width: rem-calc(60);
+    max-height: rem-calc(60);
+    &.paint {
+      max-width: rem-calc(52);
+    }
+    &.food {
+      max-height: rem-calc(40);
+    }
+    &.star {
+      max-width: rem-calc(50);
+      max-height: rem-calc(49);
+    }
+    &.alarmClock {
+      max-width: rem-calc(58);
+    }
+    &.wifi {
+      max-width: rem-calc(50);
+      max-height: rem-calc(40);
+    }
+    &.gift {
+      max-width: rem-calc(57);
+      max-height: rem-calc(55);
+    }
+  }
+}

@@ -1,0 +1,255 @@
+@include breakpoint(small only) {
+
+}
+
+@include breakpoint(medium) {
+  // Head
+  .head {
+    .title {
+      font-size: rem-calc(24);
+    }
+  }
+  .headMenu {
+    padding: 0;
+    li {
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+    a {
+      padding-top: rem-calc(14);
+      padding-bottom: rem-calc(14);
+    }
+  }
+  .logo {
+    max-width: 100%;
+  }
+
+  // Hero
+  .hero {
+    &.slider {
+      .dots {
+        bottom: rem-calc(45);
+      }
+    }
+  }
+  .booking {
+    .dateFieldContainer {
+      &.left {
+        margin-right: rem-calc(-10);
+        .dateField {
+          background-position: right rem-calc(18) center;
+        }
+      }
+      &.right {
+        margin-left: rem-calc(-10);
+      }
+    }
+  }
+
+  // Apartment
+  .apartmentGallery,
+  .apartmentContent {
+    float: left;
+  }
+  .apartmentGallery {
+    width: 40%;
+  }
+  .apartmentContent {
+    width: 60%;
+  }
+
+  // About
+  .mapInfo {
+    left: rem-calc(22);
+  }
+
+  // Footer {
+  .footer {
+    .infoTitle,
+    .address {
+      font-size: rem-calc(25);
+    }
+    .phone {
+      font-size: rem-calc(39);
+    }
+  }
+
+}
+
+@include breakpoint(medium only) {
+  // Head
+  .headMenu {
+    font-size: rem-calc(12);
+    letter-spacing: 0;
+    &.menu {
+      flex-wrap: nowrap;
+    }
+  }
+
+}
+
+@include breakpoint(large) {
+  // Head
+  .head {
+    .title {
+      margin-top: rem-calc(22);
+      font-size: rem-calc(29);
+    }
+  }
+  .headMenu {
+    margin-left: rem-calc(-10);
+    margin-right: rem-calc(-10);
+    padding: 0;
+    a {
+      padding-left: rem-calc(10);
+      padding-right: rem-calc(10);
+    }
+  }
+
+  // Apartment
+  .apartmentGallery {
+    position: relative;
+    .apartmentThumbnail {
+      &.slick-slide {
+        margin-left: 0;
+        margin-right: 0;
+        width: rem-calc(90);
+      }
+    }
+  }
+  .apartmentThumbnailsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem-calc(110);
+  }
+  .apartmentThumbnails,
+  .apartmentPhoto {
+    height: rem-calc(205);
+  }
+  .apartmentThumbnails {
+    margin-top: rem-calc(-4);
+    margin-bottom: rem-calc(-4);
+  }
+  .apartmentPhotoContainer {
+    margin-left: rem-calc(110);
+    
+  }
+  .apartmentPhoto {
+    margin: 0 rem-calc(-3);
+    padding-left: 0;
+  }
+  .apartmentContent {
+    display: table;
+    padding-top: rem-calc(24);
+    min-height: rem-calc(205);
+  }
+  .apartmentInfo,
+  .apartmentBooking {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .apartmentInfo {
+    padding-right: rem-calc(40);
+  }
+  .apartmentBooking {
+    position: relative;
+    left: rem-calc(7);
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(10);
+    border-left: 1px solid $secondary-color;
+  }
+
+  // Places
+  .placesSlider {
+    &.withArrows {
+      .arrow {
+        &.prev {
+          left: 50%;
+          margin-left: rem-calc(-300);
+        }
+        &.next {
+          right: 50%;
+          margin-right: rem-calc(-300);
+        }
+      }
+    }
+    .slide {
+      width: rem-calc(280);
+      &.slick-center {
+        width: rem-calc(600);
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    padding-bottom: 0;
+    .booking {
+      margin-left: rem-calc(-20);
+      margin-right: 0;
+    }
+  }
+  
+}
+
+@include breakpoint(xlarge) {
+  // Hero
+  .hero {
+    &.slider {
+      .slide {
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: rem-calc(586);
+      }
+      .slideContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  // Apartments
+  .apartments {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+  }
+  .apartment {
+    margin-left: rem-calc(-20px);
+    margin-right: rem-calc(-20px);
+  }
+  .apartmentGallery {
+    width: 33.3333%;
+  }
+  .apartmentContent {
+    width: 66.6666%;
+  }
+
+  // Feedback
+  .feedbackItems {
+    margin: 0 rem-calc(-10);
+  }
+
+}
+
+@include breakpoint(xxlarge) {
+  // Feedback
+  .feedbackItems {
+    padding-bottom: 0;
+  }
+
+}
+
+@include breakpoint(1920px) {
+  .mapContainer {
+    width: rem-calc(944);
+  }
+}

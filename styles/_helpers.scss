@@ -1,0 +1,14 @@
+@mixin ripple-border($sc, $ec, $sx, $sy){
+  background:
+    linear-gradient(
+      45deg, $sc 33.333%,
+      $ec 33.333%, $ec 66.667%,
+      $sc 66.667%
+    ),
+    linear-gradient(
+      -45deg, $sc 33.333%,
+      $ec 33.333%, $ec 66.667%,
+      $sc 66.667%
+    );
+  background-size: $sx $sy;
+}
