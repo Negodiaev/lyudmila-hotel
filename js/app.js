@@ -1,6 +1,23 @@
 $(document).ready(function() {
   $(document).foundation();
 
+  // Colorbox localization
+  jQuery.extend(jQuery.colorbox.settings, {
+    current: "Изображение {current} из {total}",
+    previous: "&#10508;",
+    next: "&#10509",
+    close: "&#215;",
+    xhrError: "Не удалось загрузить содержимое.",
+    imgError: "Не удалось загрузить изображение.",
+    slideshowStart: "Начать слайд-шоу",
+    slideshowStop: "Остановить слайд-шоу"
+  });
+
+  // Toggle menu icon
+  $('#menuIcon').on('click', function() {
+    $(this).toggleClass('open');
+  });
+
   // Hero slider
   $('#heroSlider').slick({
     mobileFirst: true,
@@ -48,49 +65,72 @@ $(document).ready(function() {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
+      dots: true,
+      dotsClass: 'dots',
       asNavFor: thumbnails,
       draggable: false,
+      lazyLoad: 'ondemand',
+      fade: true,
       responsive: [{
         breakpoint: 1023,
         settings: {
-          vertical: true
+          dots: false
         }
       }]
     });
+  });
+
+  // Apartment gallery
+  $('.apartmentPhoto a').colorbox({
+    rel: 'apartmentsGalleryGroup',
+    maxWidth:'95%',
+    maxHeight:'95%'
   });
 
   // About slider
   $('#aboutSlider').slick({
     mobileFirst: true,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
     prevArrow: '<button type="button" class="arrow prev">&#8249;</button>',
     nextArrow: '<button type="button" class="arrow next">&#8250;</button>',
+    dots: true,
+    dotsClass: 'dots',
     responsive: [{
       breakpoint: 480,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 3,
+        arrows: true,
+        dots: false,
       }
     }, {
       breakpoint: 640,
       settings: {
-        slidesToShow: 4
+        slidesToShow: 4,
+        dots: false,
+        arrows: true
       }
     }, {
       breakpoint: 820,
       settings: {
-        slidesToShow: 5
+        slidesToShow: 5,
+        dots: false,
+        arrows: true
       }
     }, {
       breakpoint: 1023,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 3,
+        dots: false,
+        arrows: true
       }
     }]
   });
 
   // About gallery
-  $('#aboutSlider a').colorbox({ rel: 'aboutGalleryGroup' });
+  $('#aboutSlider a').colorbox({ rel: 'aboutGalleryGroup', maxWidth:'95%', maxHeight:'95%' });
   
   // Feedback slider
   $('#feedbackSlider').slick({
@@ -129,25 +169,34 @@ $(document).ready(function() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    dotsClass: 'dots',
     prevArrow: '<button type="button" class="arrow prev">&#8249;</button>',
     nextArrow: '<button type="button" class="arrow next">&#8250;</button>',
     responsive: [{
       breakpoint: 640,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        arrows: true,
+        dots: false
       }
     }, {
       breakpoint: 1023,
       settings: {
         variableWidth: true,
         centerMode: true,
-        draggable: false,
-        useTransform: false
+        centerPadding: '0px',
+        speed: 500,
+        arrows: true,
+        dots: false,
+        draggable: false
       }
     }]
   });
 
+  // Places slider buttons
   $('#placesSlider .arrow').on('mouseup', function(){
     $('#placesSlider .arrow').css({'opacity': 0});
     setTimeout(function() {
@@ -155,7 +204,7 @@ $(document).ready(function() {
     }, 800);
   });
 
-  //Google Maps API
+  // Google Maps API
 	function initialize() {
 		var mapCanvas = document.getElementById('map');
 		var mapOptions = {
@@ -176,6 +225,35 @@ $(document).ready(function() {
 		});
 	}
 	// icon: iconBase
-	google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
+  
+  // Content gallery
+  $('.content a.thumbnail').colorbox({ maxWidth:'95%', maxHeight:'95%' });
+  $('.contentGallery a').colorbox({ rel: 'contentGalleryGroup', maxWidth:'95%', maxHeight:'95%' });
+
+  // Replace select values
+  function replaceSelectValues() {
+    var amountSelects = $('select.peopleAmount');
+
+    for (var i = 0; i < amountSelects.length; i++) {
+      setSelectValue(amountSelects.eq(i));
+    }
+  }
+
+  function setSelectValue(item) {
+    var isAdultsSelect = item.hasClass('adults'),
+        isChildrenSelect = item.hasClass('children');
+
+    if ($(window).width() < 544) {
+      if (isAdultsSelect) item[0].options[0].text = 'Взрослых';
+      if (isChildrenSelect) item[0].options[0].text = 'Детей';
+    } else {
+      if (isAdultsSelect) item[0].options[0].text = 'Количество взрослых';
+      if (isChildrenSelect) item[0].options[0].text = 'Количество детей';
+    }
+  }
+
+  replaceSelectValues();
+  $(window).resize(replaceSelectValues);
   
 });

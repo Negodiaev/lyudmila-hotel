@@ -1,13 +1,17 @@
 .advantages {
-  padding: rem-calc(95) 0 rem-calc(70);
+  padding: rem-calc(40) 0;
   background-position: 50% 0;
   .sectionTitle {
-    margin-bottom: rem-calc(70);
+    margin-bottom: rem-calc(40);
   }
 }
 
+.advantageContainer {
+  margin-bottom: rem-calc(10);
+}
+
 .advantage {
-  padding: rem-calc(46) 0;
+  padding: rem-calc(20) 0 rem-calc(10);
   border: 1px solid #ebebeb;
   background-color: rgba($white, .61);
   .title {

@@ -32,7 +32,7 @@
 @include foundation-pagination;
 // @include foundation-progress-bar;
 // @include foundation-slider;
-// @include foundation-sticky;
+@include foundation-sticky;
 @include foundation-reveal;
 // @include foundation-switch;
 @include foundation-table;
@@ -46,7 +46,6 @@
 
 // Custom styles
 @import 'helpers';
-@import 'fonts';
 @import 'base';
 
 @import 'colorbox';
@@ -61,6 +60,10 @@
 @import 'feedback';
 @import 'places';
 @import 'footer';
+
+@import 'innerPage';
+@import 'secondaryPage';
+@import 'bookingPage';
 
 @import 'responsive';
 

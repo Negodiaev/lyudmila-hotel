@@ -1,14 +1,22 @@
-@mixin ripple-border($sc, $ec, $sx, $sy){
-  background:
-    linear-gradient(
-      45deg, $sc 33.333%,
-      $ec 33.333%, $ec 66.667%,
-      $sc 66.667%
-    ),
-    linear-gradient(
-      -45deg, $sc 33.333%,
-      $ec 33.333%, $ec 66.667%,
-      $sc 66.667%
-    );
-  background-size: $sx $sy;
+@mixin sectionBorder($d, $c) {
+  @if $d == 'bottom' {
+    &:before,
+    &:after {
+      top: 0;
+      bottom: auto;
+    }
+    &:before {
+      background-image: radial-gradient(circle at 13px 13px,transparent 10px,$c 0);
+    }
+    &:after {
+      background-image: radial-gradient(circle at 13px -4px,$c 12px,transparent 0);
+    }
+  } @else {
+    &:before {
+      background-image: radial-gradient(circle at 13px -7px,transparent 10px, $c 0);
+    }
+    &:after {
+      background-image: radial-gradient(circle at 13px 12px,$c 12px, transparent 0);
+    }
+  }
 }

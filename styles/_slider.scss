@@ -6,6 +6,9 @@
       font-size: rem-calc(30);
       font-weight: 600;
       background-color: rgba($white, .8);
+      &:hover {
+        background-color: $white;
+      }
       &.prev {
         left: 0;
         border-radius: 0 rem-calc(30) rem-calc(30) 0;
@@ -20,9 +23,12 @@
     .dots {
       position: absolute;
       left: 50%;
+      z-index: 2;
       margin: 0;
+      width: 100%;
       list-style: none;
       font-size: 0;
+      text-align: center;
       transform: translateX(-50%);
       li {
         display: inline-block;
@@ -43,6 +49,14 @@
           outline-color: transparent;
           text-indent: 10rem;
           background-color: $white;
+        }
+      }
+    }
+    &.dotsTransparent {
+      li {
+        button {
+          border-color: $white;
+          background-color: transparent;
         }
       }
     }

@@ -1,7 +1,6 @@
 .hero {
   &.slider {
     .slide {
-      padding: rem-calc(120) 0;
       background-position: 50% 0;
     }
     .dots {
@@ -11,8 +10,7 @@
 }
 
 .booking {
-  padding: rem-calc(40) 0 rem-calc(28);
-  max-width: rem-calc(580);
+  padding: rem-calc(40) 0 rem-calc(50);
   background-color: rgba(white, .8);
   box-shadow: 0 9px 9px rgba(0, 0, 0, 0.19);
   .row {

@@ -1,11 +1,11 @@
 .places {
-  padding: rem-calc(65) 0 rem-calc(30);
+  padding: rem-calc(40) 0 rem-calc(30);
   background-color: $white;
   .row {
     max-width: rem-calc(1800);
   }
   .sectionTitle {
-    margin-bottom: rem-calc(65);
+    margin-bottom: rem-calc(30);
   }
 }
 
@@ -15,6 +15,11 @@
     .arrow {
       padding-left: rem-calc(12);
       padding-right: rem-calc(12);
+    }
+  }
+  &.withDots {
+    .dots {
+      bottom: rem-calc(-40);
     }
   }
   .slide {
@@ -37,6 +42,7 @@
 .place {
   position: relative;
   height: 100%;
+  background-color: $white;
   &:after {
     content: '';
     position: absolute;
@@ -46,7 +52,7 @@
     right: 0;
     z-index: 2;
     width: 100%;
-    background-color: rgba($white, .8);
+    background-color: rgba($white, .86);
   }
   .info {
     position: absolute;
@@ -55,11 +61,15 @@
     z-index: 3;
     display: none;
     width: 100%;
-    padding: rem-calc(26) rem-calc(50) rem-calc(11) rem-calc(35);
+    padding: rem-calc(28) rem-calc(50) rem-calc(10) rem-calc(32);
     background-color: rgba($white, .86);
+    p {
+      font-size: rem-calc(15);
+      line-height: unitless-calc(24, 15);
+    }
   }
   .placeTitle {
-    margin-bottom: rem-calc(14);
+    margin-bottom: rem-calc(8);
     line-height: unitless-calc(25, 20);
     font-weight: 700;
   }

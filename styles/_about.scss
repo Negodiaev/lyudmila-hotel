@@ -1,8 +1,8 @@
 .about {
-  padding: rem-calc(80) rem-calc(10) rem-calc(58);
+  padding: rem-calc(40) 0;
   background-color: $white;
   .sectionTitle {
-    margin: rem-calc(-10) 0 rem-calc(40);
+    margin-bottom: rem-calc(20);
   }
   p {
     margin-bottom: rem-calc(22);
@@ -12,7 +12,10 @@
 }
 
 .aboutSlider {
-  margin-top: rem-calc(46);
+  margin: rem-calc(10) 0;
+  img {
+    width: 100%;
+  }
   .arrow {
     &.prev {
       left: 0;
@@ -20,6 +23,9 @@
     &.next {
       right: 0;
     }
+  }
+  .dots {
+    bottom: rem-calc(20);
   }
 }
 
@@ -31,22 +37,24 @@
 
 .map {
   width: 100%;
-  height: rem-calc(536);
+  height: rem-calc(360);
 }
 
 .mapInfo {
   position: absolute;
   bottom: rem-calc(22);
-  left: 1rem;
-  padding: rem-calc(25);
+  left: 50%;
+  padding: rem-calc(15);
+  min-width: rem-calc(200);
   font-weight: 600;
   background-color: rgba($white, .75);
+  transform: translateX(-50%);
   .title {
     margin-bottom: rem-calc(30);
   }
   .icon {
     margin-bottom: rem-calc(20);
-    max-width: rem-calc(84);
-    max-height: rem-calc(76);
+    max-width: rem-calc(42);
+    max-height: rem-calc(38);
   }
 }

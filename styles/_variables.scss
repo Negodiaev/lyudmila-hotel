@@ -203,7 +203,7 @@ $anchor-text-decoration: underline;
 // $subheader-font-weight: $global-weight-normal;
 // $subheader-margin-top: 0.2rem;
 // $subheader-margin-bottom: 0.5rem;
-$stat-font-size: rem-calc(77);
+$stat-font-size: rem-calc(40);
 
 // // 6. Abide
 // // --------
@@ -425,7 +425,7 @@ $button-sizes: (
 $select-triangle-color: $medium-gray;
 // $select-radius: $global-radius;
 // $input-color: $black;
-$input-placeholder-color: $dark-gray;
+$input-placeholder-color: $black;
 // $input-font-family: inherit;
 $input-font-size: rem-calc(15);
 // $input-font-weight: $global-weight-normal;
@@ -436,8 +436,8 @@ $input-line-height: unitless-calc(19, 15);
 $input-border: 1px solid #e5e5e5;
 $input-border-focus: 1px solid $medium-gray;
 $input-padding: rem-calc(10) rem-calc(15);
-// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-// $input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow: none;
+$input-shadow-focus: none;
 // $input-cursor-disabled: not-allowed;
 // $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 // $input-number-spinners: true;
@@ -767,21 +767,21 @@ $mediaobject-section-padding: rem-calc(20);
 // // 50. Table
 // // ---------
 
-// $table-background: $white;
+$table-background: $white;
 // $table-color-scale: 5%;
-// $table-border: 1px solid smart-scale($table-background, $table-color-scale);
-// $table-padding: rem-calc(8 10 10);
+$table-border: 1px solid $medium-gray;
+$table-padding: rem-calc(22 10 22);
 // $table-hover-scale: 2%;
 // $table-row-hover: darken($table-background, $table-hover-scale);
 // $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 // $table-is-striped: true;
 // $table-striped-background: smart-scale($table-background, $table-color-scale);
 // $table-stripe: even;
-// $table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-background: $table-background;
 // $table-head-row-hover: darken($table-head-background, $table-hover-scale);
 // $table-foot-background: smart-scale($table-background, $table-color-scale);
 // $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
-// $table-head-font-color: $body-font-color;
+$table-head-font-color: #a5a5a5;
 // $table-foot-font-color: $body-font-color;
 // $show-header-for-stacked: false;
 // $table-stack-breakpoint: medium;

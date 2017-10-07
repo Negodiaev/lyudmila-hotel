@@ -1,3 +1,8 @@
+button,
+select {
+  cursor: pointer;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -33,6 +38,41 @@ svg {
   }
 }
 
+.checkbox {
+  position: absolute;
+  left: -9999px;
+  pointer-events: none;
+  & + label {
+    position: relative;
+    margin: 0;
+    padding-left: rem-calc(28);
+    cursor: pointer;
+    user-select: none;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: rem-calc(20);
+      height: rem-calc(20);
+      border: 1px solid $secondary-color;
+      font-size: rem-calc(16);
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+      color: $primary-color;
+      transform: translateY(-50%);
+    }
+  }
+  &:checked {
+    & + label {
+      &:before {
+        content: '\2714';
+      }
+    }
+  }
+}
+
 .backgroundFull {
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,59 +82,42 @@ svg {
   background-repeat: repeat;
 }
 
+.sectionBorder {
+  position: relative;
+  width: 100%;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  &:before {
+    height: 6px;
+    background-image: radial-gradient(circle at 13px -7px,transparent 10px, $body-background 0);
+    background-repeat: repeat;
+    background-size: 26px 10px;
+  }
+  &:after {
+    height: 8px;
+    background-image: radial-gradient(circle at 13px 12px,$body-background 12px, transparent 0);
+    background-size: 26px 10px;
+    background-position: 13px 0;
+  }
+  &.bottom {
+    @include sectionBorder(bottom, $body-background);
+  }
+  &.topWhite {
+    @include sectionBorder(top, $white);
+  }
+  &.bottomWhite {
+    @include sectionBorder(bottom, $white);
+  }
+}
+
 .spriteContainer {
   position: absolute;
   left: -9999px;
   opacity: 0;
-}
-
-.rippleBorder {
-  position: relative;
-  &.top {
-    &:before {
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-    }
-    &.white {
-      &:before {
-        @include ripple-border(transparent, $white, 22px, 40px);
-      }
-    }
-    &.bodyBackground {
-      &:before {
-        @include ripple-border(transparent, $body-background, 22px, 40px);
-      }
-    }
-    &.reverse {
-      &:before {
-        top: 0;
-        transform: rotate(180deg);
-      }
-    }
-  }
-  &.bottom {
-    &.white {
-      &:after {
-        @include ripple-border(transparent, $white, 22px, 40px);
-      }
-    }
-    &.bodyBackground {
-      &:after {
-        @include ripple-border(transparent, $body-background, 22px, 40px);
-      }
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      transform: rotate(180deg);
-    }
-  }
 }

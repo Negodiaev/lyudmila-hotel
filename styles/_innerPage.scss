@@ -1,0 +1,117 @@
+.innerPage {
+}
+
+.content {
+  padding: rem-calc(40) 0 rem-calc(45);
+  font-size: rem-calc(15);
+  line-height: unitless-calc(25, 15);
+  h1 {
+    margin-bottom: rem-calc(11);
+    font-size: rem-calc(30);
+  }
+  h2 {
+    font-size: rem-calc(20);
+    line-height: unitless-calc(25, 20);
+  }
+  h3,
+  p {
+    line-height: unitless-calc(25, 15);
+  }
+  h3 {
+    font-size: rem-calc(15);
+    font-weight: 700;
+  }
+  p {
+    margin: rem-calc(12) 0 rem-calc(25);
+  }
+  table {
+    margin-bottom: rem-calc(16);
+    width: 100%;
+    thead,
+    tbody {
+      border: 0;
+    }
+    tr {
+      &:last-child {
+        border: 0;
+      }
+    }
+    th,
+    td {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    th {
+      padding-top: rem-calc(32);
+      padding-bottom: rem-calc(4);
+      font-weight: 400;
+    }
+    td {
+      padding-top: rem-calc(21);
+      padding-bottom: rem-calc(21);
+      font-size: rem-calc(16);
+      line-height: unitless-calc(25, 16);
+    }
+  }
+  ul {
+    margin: rem-calc(22) 0 rem-calc(14);
+    padding: 0;
+    line-height: unitless-calc(32, 15);
+    &.marked {
+      li {
+        &:before {
+          display: inline-block;
+        }
+      }
+    }
+    li {
+      list-style: none;
+      &:before {
+        content: '';
+        display: none;
+        margin-right: rem-calc(5);
+        width: rem-calc(10);
+        height: rem-calc(10);
+        border-radius: 50%;
+        background-color: $primary-color;
+      }
+    }
+  }
+  form {
+    &.textFields {
+      margin-top: rem-calc(30);
+    }
+  }
+  input {
+    margin-bottom: rem-calc(30);
+    padding: rem-calc(15) rem-calc(18);
+    height: rem-calc(50);
+    background-color: rgba($white, .93);
+  }
+  .help-text {
+    margin-top: rem-calc(-10);
+    font-style: normal;
+    color: #a5a5a5;
+  }
+}
+
+.contentItem {
+  margin-bottom: rem-calc(20);
+  padding-top: rem-calc(35);
+  background-color: $white;
+  .innerItem {
+    padding-bottom: rem-calc(24);
+  }
+}
+
+.contentGalleryContainer {
+  padding-bottom: rem-calc(50);
+}
+
+.contentGallery {
+  margin-top: rem-calc(40);
+  margin-bottom: rem-calc(27);
+  .column-block {
+    margin-bottom: rem-calc(25);
+  }
+}

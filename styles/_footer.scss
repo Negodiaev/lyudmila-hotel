@@ -18,28 +18,39 @@
   .address {
     margin-top: rem-calc(32);
   }
+  .bookingContainer {
+    overflow: hidden;
+  }
   .booking {
-    margin: 0 rem-calc(-10) rem-calc(40);
+    margin: 0 rem-calc(-20) rem-calc(40);
     padding: 0;
     background-color: transparent;
     box-shadow: none;
     .title {
-      margin-bottom: rem-calc(42);
+      margin-bottom: rem-calc(25);
+    }
+    .select,
+    .dateField {
+      background-color: rgba($white, .93);
     }
     .button {
       margin: rem-calc(10) 0 rem-calc(14);
     }
   }
   .button {
-    color: $body-font-color;
-    background-color: $white;
+    border: 1px solid $white;
+    @include button-style($white, transparent, $body-font-color);
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 }
 
 .scl {
   margin-top: rem-calc(44);
   li {
-    margin-right: rem-calc(15);
+    margin-right: rem-calc(10);
   }
   a {
     padding: 0;

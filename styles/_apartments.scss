@@ -1,15 +1,16 @@
 .apartments {
-  padding: rem-calc(90) 0 rem-calc(94);
+  padding: rem-calc(40) 0;
 }
 
 .apartment {
-  margin-bottom: 2rem;
+  margin-bottom: rem-calc(10);
   padding: rem-calc(10) 0;
   border: 1px solid #e5e5e5;
   background-color: $white;
 }
 
 .apartmentGallery {
+  margin-bottom: rem-calc(30);
   .row {
     margin: 0;
   }
@@ -19,7 +20,8 @@
       margin: rem-calc(3);
       width: rem-calc(83);
       height: rem-calc(63);
-      border: none;
+      border: 0;
+      cursor: pointer;
       &:after {
         content: '';
         position: absolute;
@@ -40,12 +42,27 @@
       }
     }
   }
+  .apartmentPhoto {
+    .slick-slide {
+      border: 0;
+    }
+    .dots {
+      bottom: rem-calc(10);
+    }
+  }
+}
+
+.apartmentThumbnailsContainer {
+  display: none;
 }
 
 .apartmentThumbnails,
 .apartmentPhoto {
   overflow: hidden;
   padding: 0 rem-calc(10);
+  img {
+    width: 100%;
+  }
 }
 
 .apartmentThumbnails {
@@ -53,7 +70,7 @@
 }
 
 .apartmentContent {
-  padding: 0 rem-calc(10)
+  padding: 0 rem-calc(10);
 }
 
 .apartmentInfo,
@@ -66,7 +83,7 @@
 .apartmentInfo {
   padding-right: rem-calc(20);
   .title {
-    margin-bottom: rem-calc(30);
+    margin-bottom: rem-calc(10);
   }
   .titleLink {
     color: $black;
@@ -87,6 +104,6 @@
     font-size: rem-calc(16);
   }
   .button {
-    margin: 0 rem-calc(7) 0 0;
+    margin: 0;
   }
 }
