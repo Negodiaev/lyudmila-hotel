@@ -35,6 +35,42 @@
     }
   }
 
+  // Inner page
+  .orderDetails {
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(15);
+  }
+  .pageControl {
+    font-size: rem-calc(12);
+    .icon {
+      display: none;
+    }
+    &.controlPrev {
+      .text {
+        margin-right: rem-calc(-8);
+      }
+    }
+  }
+  .servicesPage,
+  .datesPage {
+    h1 {
+      &.title {
+        font-size: rem-calc(22);
+      }
+    }
+  }
+  .datesPage {
+    .content {
+      .booking {
+        padding-top: rem-calc(30);
+        padding-bottom: rem-calc(20);
+        .button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 @include breakpoint(480) {
@@ -49,6 +85,35 @@
   }
   .callbackLink {
     display: none;
+  }
+
+  // Inner page
+  .servicesPage {
+    .content {
+      table {
+        td {
+          font-size: rem-calc(15);
+        }
+        .col-1 {
+          .colContent {
+            &.withSelect {
+              min-width: rem-calc(280px);
+            }
+          }
+        }
+      }
+      p {
+        font-size: rem-calc(15);
+      }
+      select {
+        max-width: rem-calc(170px);
+      }
+    }
+    .checkbox {
+      & + label {
+        font-size: rem-calc(15);
+      }
+    }
   }
 
 }
@@ -156,6 +221,67 @@
       font-size: rem-calc(39);
     }
   }
+
+  // Inner page
+  .orderDetails {
+    margin-bottom: rem-calc(35);
+  }
+  .errorPage {
+    .errorContentItem {
+      display: table;
+      vertical-align: middle;
+      padding-top: rem-calc(40);
+      padding-bottom: rem-calc(60);
+      .errorItem,
+      .errorItem:last-child {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+      }
+    }
+  }
+  .servicesPage {
+    h1 {
+      &.title {
+        margin-bottom: rem-calc(40);
+      }
+    }
+    .content {
+      h2 {
+        &.costInfo {
+          margin-top: rem-calc(14);
+          margin-bottom: rem-calc(30);
+        }
+        font-size: rem-calc(20);
+      }
+      table {
+        .col-1 {
+          .colContent {
+            padding-right: rem-calc(5);
+            &.withSelect {
+              min-width: rem-calc(342);
+            }
+          }
+        }
+        .col-2 {
+          .colContent {
+            padding-left: rem-calc(5);
+            min-width: rem-calc(85);
+          }
+        }
+      }
+      select {
+        max-width: rem-calc(230);
+        font-size: rem-calc(15);
+      }
+    }
+    .contentItem {
+      &:not(.orderDetails) {
+        margin-bottom: rem-calc(26);
+      }
+    }
+  }
+  
 
 }
 
@@ -368,8 +494,54 @@
       }
     }
   }
+  .pageControl {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+  }
+  .errorPage {
+    h1 {
+      &.title {
+        margin-left:  rem-calc(-5);
+        margin-bottom:  rem-calc(52);
+        font-size: rem-calc(37);
+      }
+    }
+    .errorContentItem {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(120);
+    }
+  }
+  .errorImage {
+    margin-right: rem-calc(7);
+    margin-bottom: 0;
+  }
+  .datesPage {
+    h1 {
+      &.title {
+        margin-bottom: rem-calc(50);
+      }
+    }
+    .content {
+      padding-top: rem-calc(55);
+      padding-bottom: rem-calc(60);
+      .booking {
+        padding-top: rem-calc(50);
+        padding-bottom:rem-calc(30);
+        .dateField {
+          margin-bottom: rem-calc(25);
+        }
+        .button {
+          margin-top: rem-calc(20);
+        }
+      }
+    }
+  }
+  .servicesPage {
+    .footer {
+      padding-top: rem-calc(48);
+    }
+  }
 
-  
 }
 
 @include breakpoint(xlarge) {
@@ -405,6 +577,52 @@
       margin-top: rem-calc(43);
     }
   }
+
+  // Inner page
+  .errorPage {
+    .errorContentItem {
+      padding-top: rem-calc(186);
+      padding-bottom: rem-calc(210);
+    }
+  }
+  .errorImage {
+    margin-left: rem-calc(7);
+    margin-right: auto;
+  }
+  .errorInfo {
+    margin-left: rem-calc(-10);
+  }
+  .datesPage {
+    .content {
+      padding-top: rem-calc(70);
+      padding-bottom: rem-calc(60);
+      .booking {
+        padding-top: rem-calc(65);
+        padding-bottom:rem-calc(45);
+        .dateField {
+          margin-bottom: rem-calc(35);
+        }
+        .button {
+          margin-top: rem-calc(30);
+        }
+      }
+    }
+  }
+  .servicesPage {
+    .content {
+      table {
+        .col-2 {
+          .colContent {
+            min-width: rem-calc(122);
+          }
+        }
+      }
+      p {
+        margin-left: rem-calc(-24);
+      }
+    }
+  }
+
 }
 
 @include breakpoint(xxlarge) {
@@ -419,6 +637,30 @@
       padding-left: rem-calc(10);
       padding-right: rem-calc(10);
       max-width: rem-calc(1220);
+    }
+  }
+  .pageControl {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .datesPage {
+    h1 {
+      &.title {
+        margin-bottom: rem-calc(92);
+      }
+    }
+    .content {
+      padding-top: rem-calc(87);
+      padding-bottom: rem-calc(70);
+      .booking {
+        padding: rem-calc(80) rem-calc(100) rem-calc(60);
+        .dateField {
+          margin-bottom: rem-calc(42);
+        }
+        .button {
+          margin-top: rem-calc(64);
+        }
+      }
     }
   }
 

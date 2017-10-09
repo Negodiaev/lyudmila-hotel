@@ -1,0 +1,13 @@
+.datesPage {
+  h1 {
+    &.title {
+      line-height: unitless-calc(19, 30);
+    }
+  }
+  .content {
+    .booking {
+      max-width: 100%;
+      box-shadow: none;
+    }
+  }
+}

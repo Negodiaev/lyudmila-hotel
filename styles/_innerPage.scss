@@ -1,6 +1,3 @@
-.innerPage {
-}
-
 .content {
   padding: rem-calc(40) 0 rem-calc(45);
   font-size: rem-calc(15);
@@ -45,6 +42,7 @@
       padding-top: rem-calc(32);
       padding-bottom: rem-calc(4);
       font-weight: 400;
+      // white-space: nowrap;
     }
     td {
       padding-top: rem-calc(21);
@@ -90,6 +88,8 @@
   }
   .help-text {
     margin-top: rem-calc(-10);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(25, 15);
     font-style: normal;
     color: #a5a5a5;
   }
@@ -113,5 +113,47 @@
   margin-bottom: rem-calc(27);
   .column-block {
     margin-bottom: rem-calc(25);
+  }
+}
+
+.orderDetails {
+  margin-bottom: rem-calc(20);
+  padding: rem-calc(22) 0 rem-calc(23);
+}
+
+.pageControl {
+  font-size: rem-calc(14);
+  line-height: unitless-calc(19, 14);
+  font-weight: 600;
+  text-decoration: none;
+  &.controlPrev {
+    .icon {
+      margin: 0 rem-calc(10) 0 rem-calc(-10);
+      transform: rotate(90deg);
+    }
+  }
+  &.controlNext {
+    .icon {
+      margin: 0 rem-calc(-5) 0 rem-calc(12);
+      transform: rotate(-90deg);
+    }
+  }
+  &:hover {
+    .text {
+      text-decoration: none;
+    }
+  }
+  .icon,
+  .text {
+    vertical-align: middle;
+  }
+  .icon {
+    max-width: rem-calc(33);
+    max-height: rem-calc(17);
+    fill: #616379;
+  }
+  .text {
+    text-transform: lowercase;
+    text-decoration: underline;
   }
 }

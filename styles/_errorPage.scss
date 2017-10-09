@@ -1,0 +1,23 @@
+.errorPage {
+  h1 {
+    &.title {
+      margin-bottom: rem-calc(30);
+      line-height: unitless-calc(45, 37);
+      font-weight: 400;
+    }
+  }
+  p {
+    margin-bottom: rem-calc(18);
+    padding-right: rem-calc(32);
+    line-height: unitless-calc(19, 15); 
+  }
+  .errorContentItem {
+    padding: rem-calc(20) 0 rem-calc(30);
+    width: 100%;
+  }
+}
+
+.errorImage {
+  display: block;
+  margin: 0 auto rem-calc(40);
+}

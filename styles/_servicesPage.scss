@@ -1,0 +1,78 @@
+.servicesPage {
+  h1 {
+    &.title {
+      margin-bottom: rem-calc(25);
+    }
+  }
+  .content {
+    padding-top: rem-calc(45);
+    padding-bottom: rem-calc(36);
+    h2 {
+      margin-bottom: rem-calc(15);
+      font-size: rem-calc(16);
+      &.costInfo {
+        margin-top: rem-calc(10);
+        margin-bottom: rem-calc(25);
+      }
+    }
+    table {
+      tr {
+        background-color: $white;
+        background-image: radial-gradient(circle at 2px 2px, #ddd 2px, transparent 0, transparent 3px);
+        background-repeat: repeat-x;
+        background-size: 7px 3px;
+        background-position: 0 50%;
+      }
+      td {
+        padding: rem-calc(7) 0;
+        font-size: rem-calc(13);
+        line-height: unitless-calc(29, 15);
+        white-space: nowrap;
+      }
+      .col-1 {
+        .colContent {
+          &.withSelect {
+            min-width: rem-calc(200);
+            label {
+              margin-top: rem-calc(12);
+            }
+          }
+        }
+      } 
+      .colContent {
+        display: inline-block;
+        background-color: $white;
+      }
+    }
+    p {
+      margin-bottom: rem-calc(14);
+      font-size: rem-calc(13);
+    }
+    select {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: rem-calc(5);
+      margin-right: rem-calc(5);
+      max-width: rem-calc(110px);
+      height: rem-calc(50);
+      font-size: rem-calc(13);
+      background-image: url(images/svg-optimized/select-down.svg);
+      background-size: 1.57143rem;
+      background-position: right -.85714rem center;
+    }
+  }
+  .contentItem {
+    &:not(.orderDetails) {
+      margin-bottom: rem-calc(10);
+      padding-top: rem-calc(22);
+      padding-bottom: rem-calc(16);
+    }
+  }
+  .checkbox {
+    & + label {
+      vertical-align: middle;
+      font-size: rem-calc(13);
+      line-height: unitless-calc(29, 15);
+    }
+  }
+}
