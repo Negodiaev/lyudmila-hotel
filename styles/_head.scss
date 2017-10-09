@@ -29,8 +29,8 @@
 .menuIcon {
   position: relative;
   vertical-align: middle;
-  width: 48px;
-  height: 34px;
+  width: 26px;
+  height: 26px;
   outline-color: transparent;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -39,7 +39,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 3px;
     border-radius: 5px;
     opacity: 1;
     background: $primary-color;
@@ -50,10 +50,10 @@
     }
     &:nth-child(2),
     &:nth-child(3) {
-      top: 14px;
+      top: 9px;
     }
     &:nth-child(4) {
-      top: 28px;
+      top: 18px;
     }
   }
   &.open {
@@ -112,8 +112,10 @@
 
 .logo {
   display: block;
-  width: rem-calc(180);
-  max-width: rem-calc(92);
+  max-width: rem-calc(40);
+  // .logoImage {
+  //   display: none;
+  // }
 }
 
 .callbackMobileContainer {
@@ -123,10 +125,10 @@
 .callbackLink {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 rem-calc(30);
+  margin: 0 rem-calc(10);
   .icon {
-    width: rem-calc(40);
-    height: rem-calc(35);
+    width: rem-calc(24);
+    height: rem-calc(22);
     fill: $primary-color;
   }
 }

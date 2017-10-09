@@ -23,11 +23,13 @@
     }
   }
   .slide {
+    position: relative;
     padding: 0 rem-calc(10);
     height: rem-calc(394);
     background-position: 50% 50%;
     &.slick-active {
       .place {
+        filter: none;
         &:after {
           display: none;
         }
@@ -35,6 +37,12 @@
           display: block;
         }
       }
+      .arrow {
+        visibility: visible;
+      }
+    }
+    .arrow {
+      visibility: hidden;
     }
   }
 }
@@ -43,6 +51,7 @@
   position: relative;
   height: 100%;
   background-color: $white;
+  filter: grayscale(100%);
   &:after {
     content: '';
     position: absolute;
@@ -61,7 +70,7 @@
     z-index: 3;
     display: none;
     width: 100%;
-    padding: rem-calc(28) rem-calc(50) rem-calc(10) rem-calc(32);
+    padding: rem-calc(20) rem-calc(20) rem-calc(10) rem-calc(20);
     background-color: rgba($white, .86);
     p {
       font-size: rem-calc(15);

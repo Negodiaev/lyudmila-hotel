@@ -3,6 +3,8 @@ $(document).ready(function() {
 
   // Colorbox localization
   jQuery.extend(jQuery.colorbox.settings, {
+    maxWidth: '95%',
+    maxHeight: '95%',
     current: "Изображение {current} из {total}",
     previous: "&#10508;",
     next: "&#10509",
@@ -10,7 +12,10 @@ $(document).ready(function() {
     xhrError: "Не удалось загрузить содержимое.",
     imgError: "Не удалось загрузить изображение.",
     slideshowStart: "Начать слайд-шоу",
-    slideshowStop: "Остановить слайд-шоу"
+    slideshowStop: "Остановить слайд-шоу",
+    onComplete: function() {
+      $.colorbox.resize();
+    }
   });
 
   // Toggle menu icon
@@ -49,6 +54,7 @@ $(document).ready(function() {
       arrows: false,
       asNavFor: photo,
       focusOnSelect: true,
+      draggable: true,
       responsive: [{
         breakpoint: 1023,
         settings: {
@@ -62,30 +68,27 @@ $(document).ready(function() {
     });
     photo.slick({
       mobileFirst: true,
+      infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       dots: true,
       dotsClass: 'dots',
+      lazyLoad: 'progressive',
       asNavFor: thumbnails,
-      draggable: false,
-      lazyLoad: 'ondemand',
-      fade: true,
       responsive: [{
         breakpoint: 1023,
         settings: {
-          dots: false
+          dots: false,
+          draggable: false,
+          fade: true
         }
       }]
     });
   });
 
   // Apartment gallery
-  $('.apartmentPhoto a').colorbox({
-    rel: 'apartmentsGalleryGroup',
-    maxWidth:'95%',
-    maxHeight:'95%'
-  });
+  $('.apartmentPhoto a').colorbox({ rel: 'apartmentsGalleryGroup' });
 
   // About slider
   $('#aboutSlider').slick({
@@ -130,7 +133,7 @@ $(document).ready(function() {
   });
 
   // About gallery
-  $('#aboutSlider a').colorbox({ rel: 'aboutGalleryGroup', maxWidth:'95%', maxHeight:'95%' });
+  $('#aboutSlider a').colorbox({ rel: 'aboutGalleryGroup' });
   
   // Feedback slider
   $('#feedbackSlider').slick({
@@ -172,15 +175,11 @@ $(document).ready(function() {
     arrows: false,
     dots: true,
     dotsClass: 'dots',
-    prevArrow: '<button type="button" class="arrow prev">&#8249;</button>',
-    nextArrow: '<button type="button" class="arrow next">&#8250;</button>',
     responsive: [{
       breakpoint: 640,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: true,
-        dots: false
+        slidesToScroll: 2
       }
     }, {
       breakpoint: 1023,
@@ -190,19 +189,21 @@ $(document).ready(function() {
         centerPadding: '0px',
         speed: 500,
         arrows: true,
+        prevArrow: '<button type="button" class="arrow prev">&#8249;</button>',
+        nextArrow: '<button type="button" class="arrow next">&#8250;</button>',
+        appendArrows: $('#placesSlider .place'),
         dots: false,
-        draggable: false
+        // draggable: false
       }
     }]
   });
 
-  // Places slider buttons
-  $('#placesSlider .arrow').on('mouseup', function(){
-    $('#placesSlider .arrow').css({'opacity': 0});
-    setTimeout(function() {
-      $('#placesSlider .arrow').css({'opacity': 1});
-    }, 800);
-  });
+  var placesSlider = $('#placesSlider'),
+      placesPrevArrow = $('#placesSlider .slide .arrow.prev'),
+      placesNextArrow = $('#placesSlider .slide .arrow.next');
+
+    placesPrevArrow.on('click', function() { placesSlider.slick('slickPrev') });
+    placesNextArrow.on('click', function() { placesSlider.slick('slickNext') });
 
   // Google Maps API
 	function initialize() {
@@ -228,8 +229,8 @@ $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
   
   // Content gallery
-  $('.content a.thumbnail').colorbox({ maxWidth:'95%', maxHeight:'95%' });
-  $('.contentGallery a').colorbox({ rel: 'contentGalleryGroup', maxWidth:'95%', maxHeight:'95%' });
+  $('.content a.thumbnail').colorbox();
+  $('.contentGallery a').colorbox({ rel: 'contentGalleryGroup' });
 
   // Replace select values
   function replaceSelectValues() {

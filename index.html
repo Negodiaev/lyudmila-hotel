@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 </head>
-<body>
+<body class="home">
   <header class="head">
     <div data-sticky-container>
       <div class="headTop sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="heroSlider:bottom"  style="width:100%">
         <div class="row">
           <div class="titleBar title-bar align-spaced" data-responsive-toggle="headMenu" data-hide-for="medium">
-            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <a href="#" class="logo">
+              <img src="images/logo_mobile.png" class="logoImageMobile" alt="">
+            </a>
+            <div class="title">Отель Людмила</div>
             <div class="text-right">
               <div class="callbackMobileContainer">
                 <div class="title">8-922-64-38-795</div>
@@ -80,8 +83,8 @@
     <div id="heroSlider" class="hero slider withDots">
       <div class="slide backgroundFull" style="background-image: url(images/hero/slide-1.jpg)">
         <div class="slideContent">
-          <div class="row">
-            <div class="large-6 large-centered columns">
+          <div class="row small-collapse large-uncollapse">
+            <div class="large-8 large-centered columns">
               <div class="booking float-center">
                 <div class="row">
                   <div class="column">
@@ -150,6 +153,8 @@
           <div class="row">
             <div class="large-8 columns">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p>
             </div>
             <!-- /.columns -->
@@ -164,23 +169,7 @@
       </div>
       <!-- /.slide -->
       <div class="slide backgroundFull" style="background-image: url(images/hero/slide-1.jpg)">
-        <div class="slideContent">
-          <div class="row">
-            <div class="large-3 columns">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sint ad soluta!</p>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, quam. Ipsam corporis inventore, esse asperiores natus dicta fugit, dolore ea quos cum id quibusdam doloribus, accusantium pariatur nulla impedit libero hic omnis. Quod, aspernatur.</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <!-- /.columns -->
-            <div class="large-9 columns">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nostrum sunt quo minima odit fugit earum similique, eaque dolorum porro ratione qui molestias?</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat provident repellendus qui reprehenderit quos.</p>
-            </div>
-            <!-- /.columns -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.slideContent -->
+        <img src="http://placehold.it/1920x1280" alt="">
       </div>
       <!-- /.slide -->
     </div>
@@ -394,7 +383,7 @@
             <a href="images/about/3.jpg">
               <img src="images/about/3.jpg" alt="">
             </a>
-            <a href="images/about/3.jpg">
+            <a href="images/places/1.jpg">
               <img src="images/about/3.jpg" alt="">
             </a>
             <a href="images/about/2.jpg">
@@ -588,7 +577,7 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
                 <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 2</a></h4>
                 <p>В лингвистике термин текст используется в широком значении</p>
@@ -598,7 +587,7 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
                 <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 3</a></h4>
                 <p>В лингвистике термин текст используется в широком значении</p>
@@ -608,7 +597,7 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
                 <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 4</a></h4>
                 <p>В лингвистике термин текст используется в широком значении</p>
@@ -618,7 +607,7 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
                 <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 5</a></h4>
                 <p>В лингвистике термин текст используется в широком значении</p>
@@ -628,7 +617,7 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
                 <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 6</a></h4>
                 <p>В лингвистике термин текст используется в широком значении</p>

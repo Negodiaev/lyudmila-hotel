@@ -21,6 +21,17 @@
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
 #cboxOverlay{background: rgba($black, .8) repeat 0 0; opacity: 0.9; filter: alpha(opacity = 90);}
+#colorbox,
+#cboxWrapper,
+#cboxContent,
+#cboxLoadedContent {
+    // min-width: 280px;
+}
+#cboxLoadedContent {
+    img {
+        min-width: 280px;
+    }
+}
 #colorbox{outline:0;}
     #cboxContent{background: $white; overflow:hidden; border-radius: 10px; box-shadow: 0 8px 40px rgba($white, .9)}
         .cboxIframe{background:#fff;}

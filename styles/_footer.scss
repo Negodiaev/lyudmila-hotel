@@ -32,6 +32,9 @@
     .select,
     .dateField {
       background-color: rgba($white, .93);
+      &:focus {
+        background-color: $white;
+      }
     }
     .button {
       margin: rem-calc(10) 0 rem-calc(14);

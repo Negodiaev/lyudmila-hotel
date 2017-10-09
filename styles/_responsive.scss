@@ -1,18 +1,28 @@
 @include breakpoint(small only) {
   // Head
+  .head {
+    .title {
+      margin: 0 auto 0 rem-calc(10);
+      font-size: rem-calc(16);
+    }
+  }
   .headTop {
     &.is-stuck {
       box-shadow: 0 2px 4px rgba($black, .2);
     }
   }
+  .booking {
+    .select {
+      background-position: right rem-calc(-15) center;
+    }
+  }
 
-  // Hero
-  .hero {
-    &.slider {
-      .column,
-      .columns {
-        padding: 0;
-      }
+  // About
+  .mapContainer {
+    margin: 0 rem-calc(-10);
+    &.thumbnail {
+      border: 0;
+      box-shadow: none;
     }
   }
 
@@ -62,25 +72,14 @@
     }
   }
   .logo {
+    width: rem-calc(180);
     max-width: 100%;
   }
 
   // Hero
-  .hero {
-    &.slider {
-      .slide {
-        padding: rem-calc(120) 0;
-      }
-      .dots {
-        bottom: rem-calc(45);
-      }
-    }
-  }
   .booking {
-    margin-bottom: rem-calc(8);
     padding-top: rem-calc(38); 
     padding-bottom: rem-calc(26);
-    max-width: rem-calc(580);
     .dateFieldContainer {
       &.left {
         margin-right: rem-calc(-10);
@@ -135,6 +134,18 @@
     }
   }
 
+  // Feedback
+  .feedbackItem {
+    padding-right: rem-calc(10);
+  }
+
+  // Places
+  .places {
+    .info {
+      padding: rem-calc(28) rem-calc(50) rem-calc(10) rem-calc(32);
+    }
+  }
+
   // Footer {
   .footer {
     .infoTitle,
@@ -165,8 +176,7 @@
     &.slider {
       .slide {
         position: relative;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: rem-calc(120) 0;
         height: rem-calc(586);
       }
       .slideContent {
@@ -176,7 +186,14 @@
         width: 100%;
         transform: translate(-50%, -50%);
       }
+      .dots {
+        bottom: rem-calc(45);
+      }
     }
+  }
+  .booking {
+    margin-bottom: rem-calc(8);
+    max-width: rem-calc(580);
   }
 
 }
@@ -321,7 +338,7 @@
       }
     }
     .slide {
-      width: rem-calc(280);
+      width: rem-calc(300);
       &.slick-center {
         width: rem-calc(600);
       }

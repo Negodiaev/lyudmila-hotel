@@ -434,7 +434,7 @@ $input-line-height: unitless-calc(19, 15);
 // $input-background-focus: $white;
 // $input-background-disabled: $light-gray;
 $input-border: 1px solid #e5e5e5;
-$input-border-focus: 1px solid $medium-gray;
+$input-border-focus: 2px solid rgba($primary-color, .8);
 $input-padding: rem-calc(10) rem-calc(15);
 $input-shadow: none;
 $input-shadow-focus: none;
