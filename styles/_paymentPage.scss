@@ -1,0 +1,111 @@
+.paymentPage {
+  .content {
+    padding-top: rem-calc(45);
+    h2 {
+      margin-bottom: rem-calc(20);
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: rem-calc(22);
+      font-size: rem-calc(14);
+    }
+    a {
+      display: inline-block;
+      font-weight: 600;
+      &.changeInfo {
+        margin-bottom: rem-calc(40);
+      }
+    }
+    table {
+      th {
+        padding-top: rem-calc(12);
+        padding-bottom: rem-calc(14);
+      }
+      td {
+        padding-top: rem-calc(13);
+        padding-bottom: rem-calc(13);
+      }
+    }
+    input {
+      margin-bottom: rem-calc(15);
+    }
+    select {
+      margin: rem-calc(6) 0 0;
+      max-width: 100%;
+      font-size: rem-calc(15);
+    }
+    textarea {
+      margin-bottom: 0;
+      min-width: rem-calc(280);
+      min-height: rem-calc(108);
+    }
+  }
+  .contentItem {
+    &:not(.orderDetails) {
+      margin-bottom: rem-calc(22);
+      padding-top: rem-calc(30);
+      padding-bottom: rem-calc(20);
+    }
+  }
+  .promoField {
+    max-width: rem-calc(300);
+  }
+  .totalCost {
+    margin-top: rem-calc(6);
+    margin-bottom: rem-calc(27);
+    font-size: rem-calc(18);
+    line-height: 1;
+    font-weight: 600;
+  }
+  .timeInfo {
+    font-size: rem-calc(14);
+    h3 {
+      margin-top: rem-calc(30);
+      margin-bottom: 0;
+      font-size: rem-calc(15);
+      line-height: unitless-calc(24, 17);
+      font-weight: 600;
+    }
+  }
+  .paymentType {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+    .paymentTypeItem {
+      margin-left: rem-calc(-20);
+      margin-right: rem-calc(-20);
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
+      transition: background-color .2s linear;
+      &:hover {
+        background-color: #eaf1f1;
+      }
+    }
+    .paymentTypeInfo {
+      float: left;
+      margin-left: rem-calc(2);
+      max-width: rem-calc(150);
+      font-size: rem-calc(14);
+      line-height: unitless-calc(25, 16);
+    }
+    label {
+      padding-top: rem-calc(15);
+      padding-bottom: rem-calc(15);
+      width: 100%;
+    }
+    .title {
+      margin-bottom: 0;
+      font-size: rem-calc(13);
+      line-height: unitless-calc(25, 15);
+      font-weight: 700;
+    }
+    .paymentCost {
+      padding-top: rem-calc(15);
+      font-size: rem-calc(17);
+      line-height: unitless-calc(25, 20);
+      font-weight: 600;
+    }
+  }
+  .bookingButton {
+    margin-top: rem-calc(5); 
+  }
+}

@@ -253,8 +253,61 @@ $(document).ready(function() {
       if (isChildrenSelect) item[0].options[0].text = 'Количество детей';
     }
   }
-
+  
   replaceSelectValues();
+
+  // Show apartment details
+  $('.showDetailsButton').on('click', showApartmentDetails);
+
+  function showApartmentDetails() {
+    var th = $(this),
+        container = th.parent(),
+        wrapper = container.find('.apartmentDetails'),
+        tariffsWrapper = container.find('.tariffsDetails');
+
+    th.toggleClass('clicked');
+
+    if (th.hasClass('clicked')) {
+      th.text('Свернуть');
+    } else {
+      th.text('Развернуть описание');
+    }
+
+    if (!container.hasClass('expanded') && !wrapper.hasClass('opened')) {
+      container.addClass('expanded');
+    } else if (container.hasClass('expanded') && wrapper.hasClass('opened') && !tariffsWrapper.hasClass('opened')) {
+      container.removeClass('expanded');
+    }
+
+    wrapper.toggleClass('opened');
+  }
+
+  //Show tariffs details
+  $('.showTariffsButton').on('click', showTariffsDetails);
+
+  function showTariffsDetails() {
+    var th = $(this),
+    container = th.parent(),
+    wrapper = container.find('.tariffsDetails'),
+    apartmentsWrapper = container.find('.apartmentDetails');
+
+    th.toggleClass('clicked');
+
+    if (th.hasClass('clicked')) {
+      th.text('Свернуть тарифы');
+    } else {
+      th.text('Все тарифы');
+    }
+
+    if (!container.hasClass('expanded') && !wrapper.hasClass('opened')) {
+      container.addClass('expanded');
+    } else if (container.hasClass('expanded') && wrapper.hasClass('opened') && !apartmentsWrapper.hasClass('opened')) {
+      container.removeClass('expanded');
+    }
+
+    wrapper.toggleClass('opened');
+  }
+
   $(window).resize(replaceSelectValues);
   
 });

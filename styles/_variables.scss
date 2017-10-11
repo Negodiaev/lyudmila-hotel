@@ -434,7 +434,7 @@ $input-line-height: unitless-calc(19, 15);
 // $input-background-focus: $white;
 // $input-background-disabled: $light-gray;
 $input-border: 1px solid #e5e5e5;
-$input-border-focus: 2px solid rgba($primary-color, .8);
+$input-border-focus: 1px solid rgba($primary-color, .9);
 $input-padding: rem-calc(10) rem-calc(15);
 $input-shadow: none;
 $input-shadow-focus: none;
@@ -827,14 +827,14 @@ $titlebar-icon-spacing: 0;
 // // 54. Tooltip
 // // -----------
 
-// $has-tip-cursor: help;
-// $has-tip-font-weight: $global-weight-bold;
-// $has-tip-border-bottom: dotted 1px $dark-gray;
-// $tooltip-background-color: $black;
-// $tooltip-color: $white;
-// $tooltip-padding: 0.75rem;
-// $tooltip-max-width: 10rem;
-// $tooltip-font-size: $small-font-size;
+$has-tip-cursor: pointer;
+$has-tip-font-weight: 600;
+$has-tip-border-bottom: 0;
+$tooltip-background-color: $white;
+$tooltip-color: $body-font-color;
+$tooltip-padding: 1rem 1.75rem;
+$tooltip-max-width: 20rem;
+$tooltip-font-size: 1rem;
 // $tooltip-pip-width: 0.75rem;
 // $tooltip-pip-height: $tooltip-pip-width * 0.866;
 // $tooltip-radius: $global-radius;

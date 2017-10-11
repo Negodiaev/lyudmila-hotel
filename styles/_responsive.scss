@@ -36,6 +36,16 @@
   }
 
   // Inner page
+  .innerPage {
+    .content {
+      padding-top: rem-calc(20);
+      h1 {
+        &.title {
+          font-size: rem-calc(22);
+        }
+      }
+    }
+  }
   .orderDetails {
     padding-top: rem-calc(10);
     padding-bottom: rem-calc(15);
@@ -51,14 +61,6 @@
       }
     }
   }
-  .servicesPage,
-  .datesPage {
-    h1 {
-      &.title {
-        font-size: rem-calc(22);
-      }
-    }
-  }
   .datesPage {
     .content {
       .booking {
@@ -67,6 +69,16 @@
         .button {
           width: 100%;
         }
+      }
+    }
+  }
+  .paymentPage {
+    .pageControl {
+      .icon {
+        display: inline;
+        margin: rem-calc(4) rem-calc(4) 0 rem-calc(-6);
+        max-width: rem-calc(20);
+        max-height: rem-calc(10);
       }
     }
   }
@@ -88,6 +100,12 @@
   }
 
   // Inner page
+  .orderDetails {
+    font-size: rem-calc(17);
+    a {
+      font-size: rem-calc(14);
+    }
+  }
   .servicesPage {
     .content {
       table {
@@ -113,6 +131,25 @@
       & + label {
         font-size: rem-calc(15);
       }
+    }
+  }
+  .paymentPage {
+    .paymentType {
+      .paymentTypeInfo {
+        max-width: 100%;
+        font-size: rem-calc(16);
+      }
+      .title {
+        font-size: rem-calc(15);
+      }
+      .paymentCost {
+        font-size: rem-calc(20);
+      }
+    }
+  }
+  .bookingPage {
+    .content {
+      padding-top: rem-calc(30);
     }
   }
 
@@ -223,8 +260,45 @@
   }
 
   // Inner page
+  .innerPage {
+    .content {
+      h1 {
+        &.title {
+          margin-bottom: rem-calc(40);
+        }
+      }
+      h2 {
+        &.costInfo {
+          margin-top: rem-calc(14);
+          margin-bottom: rem-calc(30);
+        }
+        font-size: rem-calc(20);
+      }
+    }
+  }
   .orderDetails {
     margin-bottom: rem-calc(35);
+    line-height: unitless-calc(19, 17);
+    a {
+      line-height: unitless-calc(19, 14);
+    }
+    .item {
+      display: inline-block;
+      padding-right: rem-calc(15);
+      &:not(:first-child) {
+        padding-left: rem-calc(10);
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 1px;
+          height: rem-calc(48);
+          background-color: $secondary-color;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
   .errorPage {
     .errorContentItem {
@@ -241,19 +315,7 @@
     }
   }
   .servicesPage {
-    h1 {
-      &.title {
-        margin-bottom: rem-calc(40);
-      }
-    }
     .content {
-      h2 {
-        &.costInfo {
-          margin-top: rem-calc(14);
-          margin-bottom: rem-calc(30);
-        }
-        font-size: rem-calc(20);
-      }
       table {
         .col-1 {
           .colContent {
@@ -278,6 +340,38 @@
     .contentItem {
       &:not(.orderDetails) {
         margin-bottom: rem-calc(26);
+      }
+    }
+  }
+  .paymentPage {
+    .content {
+      h2 {
+        margin-bottom: rem-calc(25);
+      }
+      p {
+        font-size: rem-calc(15);
+      }
+      a {
+        font-size: rem-calc(14);
+        line-height: unitless-calc(19, 14);
+      }
+    }
+    .totalCost {
+      font-size: rem-calc(25);
+    }
+    .timeInfo {
+      font-size: rem-calc(15);
+      h3 {
+        font-size: rem-calc(17);
+      }
+    }
+  }
+  .bookingPage {
+    .content {
+      padding-top: rem-calc(40);
+      h2 {
+        font-size: rem-calc(22);
+        line-height: unitless-calc(25, 22);
       }
     }
   }
@@ -492,6 +586,18 @@
           padding-left: 0;
         }
       }
+      td {
+        padding-top: rem-calc(21);
+        padding-bottom: rem-calc(21);
+      }
+    }
+  }
+  .orderDetails {
+    .item {
+      padding-right: rem-calc(22);
+      &:not(:first-child) {
+        padding-left: rem-calc(20);
+      }
     }
   }
   .pageControl {
@@ -499,11 +605,13 @@
     padding-right: rem-calc(10);
   }
   .errorPage {
-    h1 {
-      &.title {
-        margin-left:  rem-calc(-5);
-        margin-bottom:  rem-calc(52);
-        font-size: rem-calc(37);
+    .content {
+      h1 {
+        &.title {
+          margin-left:  rem-calc(-5);
+          margin-bottom:  rem-calc(52);
+          font-size: rem-calc(37);
+        }
       }
     }
     .errorContentItem {
@@ -516,14 +624,14 @@
     margin-bottom: 0;
   }
   .datesPage {
-    h1 {
-      &.title {
-        margin-bottom: rem-calc(50);
-      }
-    }
     .content {
       padding-top: rem-calc(55);
       padding-bottom: rem-calc(60);
+      h1 {
+        &.title {
+          margin-bottom: rem-calc(50);
+        }
+      }
       .booking {
         padding-top: rem-calc(50);
         padding-bottom:rem-calc(30);
@@ -539,6 +647,105 @@
   .servicesPage {
     .footer {
       padding-top: rem-calc(48);
+    }
+  }
+  .paymentPage {
+    .content {
+      h2 {
+        margin-bottom: rem-calc(30);
+      }
+      select {
+        margin-left: rem-calc(5);
+        margin-right: rem-calc(5);
+        margin-bottom: rem-calc(32);
+      }
+    }
+  }
+  .bookingPage {
+    .content {
+      padding-top: rem-calc(50);
+      padding-bottom: rem-calc(40);
+      .showDetailsButton {
+        margin-bottom: rem-calc(8);
+        &.clicked {
+          margin-bottom: rem-calc(62);
+        }
+      }
+      .showTariffsButton {
+        margin-left: rem-calc(100);
+      }
+    }
+    .apartments {
+      // padding-bottom: rem-calc(40);
+    }
+    .apartment {
+      margin-bottom: rem-calc(20);
+      padding-bottom: rem-calc(5);
+    }
+    .apartmentGallery {
+      padding-top: rem-calc(4);
+      .apartmentPhoto {
+        .slick-slide {
+          height: rem-calc(224);
+        }
+      }
+    }
+    .apartmentPhoto,
+    .apartmentThumbnails {
+      height: rem-calc(224);
+    }
+    .apartmentInfo {
+      margin-top: rem-calc(15);
+      vertical-align: top; // to remove
+      padding-right: rem-calc(10);
+      &.expanded {
+        padding-bottom: rem-calc(52);
+      }
+    }
+    .facilities {
+      margin-top: rem-calc(22);
+      li {
+        margin-bottom: 0;
+        width: rem-calc(68);
+        height: rem-calc(36);
+        border-left: 1px solid gainsboro;
+        line-height: unitless-calc(30);
+        &:first-child {
+          width: rem-calc(50);
+          border: 0;
+          text-align: left;
+        }
+      }
+    }
+    .allFacilities {
+      &.leftOffset {
+        margin-left: rem-calc(-14);
+      }
+    }
+    .contentGallery {
+      margin-top: rem-calc(38);
+      margin-bottom: rem-calc(16);
+    }
+    .tariff {
+      margin-bottom: rem-calc(35);
+      font-size: rem-calc(20);
+      .imageWrap {
+        padding-right: rem-calc(20);
+        width: rem-calc(100);
+      }
+      .cost {
+        padding-left: rem-calc(5);
+        padding-right: 0;
+        width: rem-calc(110);
+      }
+      .buttonWrap {
+        width: rem-calc(180);
+      }
+      .button {
+        padding: .85em 1em;
+        height: rem-calc(38);
+        font-size: rem-calc(12);
+      }
     }
   }
 
@@ -622,6 +829,24 @@
       }
     }
   }
+  .paymentPage {
+    .content {
+      h2 {
+        margin-bottom: rem-calc(35);
+      }
+    }
+    .timeInfo {
+      padding-top: rem-calc(14);
+    }
+  }
+  .bookingPage {
+    .tariff {
+      .text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
 
 }
 
@@ -639,19 +864,26 @@
       max-width: rem-calc(1220);
     }
   }
+  .bookingPage {
+    .orderDetails {
+      a {
+        margin-right: rem-calc(33);
+      }
+    }
+  }
   .pageControl {
     padding-left: 0;
     padding-right: 0;
   }
   .datesPage {
-    h1 {
-      &.title {
-        margin-bottom: rem-calc(92);
-      }
-    }
     .content {
       padding-top: rem-calc(87);
       padding-bottom: rem-calc(70);
+      h1 {
+        &.title {
+          margin-bottom: rem-calc(92);
+        }
+      }
       .booking {
         padding: rem-calc(80) rem-calc(100) rem-calc(60);
         .dateField {
@@ -661,6 +893,11 @@
           margin-top: rem-calc(64);
         }
       }
+    }
+  }
+  .paymentPage {
+    .bookingButton {
+      margin-right: rem-calc(-20);
     }
   }
 

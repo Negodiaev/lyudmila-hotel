@@ -1,3 +1,33 @@
+.innerPage {
+  .content {
+    h1 {
+      &.title {
+        margin-bottom: rem-calc(25);
+      }
+    }
+    h2 {
+      margin-bottom: rem-calc(15);
+      font-size: rem-calc(16);
+      &.costInfo {
+        margin-top: rem-calc(10);
+        margin-bottom: rem-calc(25);
+      }
+    }
+    select {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: rem-calc(5);
+      margin-right: rem-calc(5);
+      max-width: rem-calc(110px);
+      height: rem-calc(50);
+      font-size: rem-calc(13);
+      background-image: url(images/svg-optimized/select-down.svg);
+      background-size: 1.57143rem;
+      background-position: right -.85714rem center;
+    }
+  }
+}
+
 .content {
   padding: rem-calc(40) 0 rem-calc(45);
   font-size: rem-calc(15);
@@ -39,14 +69,14 @@
       padding-right: 0;
     }
     th {
-      padding-top: rem-calc(32);
+      padding-top: rem-calc(22);
       padding-bottom: rem-calc(4);
       font-weight: 400;
       // white-space: nowrap;
     }
     td {
-      padding-top: rem-calc(21);
-      padding-bottom: rem-calc(21);
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
       font-size: rem-calc(16);
       line-height: unitless-calc(25, 16);
     }
@@ -114,11 +144,21 @@
   .column-block {
     margin-bottom: rem-calc(25);
   }
+  img {
+    width: 100%;
+  }
 }
 
 .orderDetails {
   margin-bottom: rem-calc(20);
   padding: rem-calc(22) 0 rem-calc(23);
+  font-size: rem-calc(12);
+  a {
+    font-weight: 600;
+  }
+  .item {
+    position: relative;
+  }
 }
 
 .pageControl {

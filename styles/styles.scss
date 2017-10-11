@@ -39,7 +39,7 @@
 // @include foundation-tabs;
 @include foundation-thumbnail;
 @include foundation-title-bar;
-// @include foundation-tooltip;
+@include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
@@ -66,8 +66,7 @@
 @import 'bookingPage';
 @import 'datesPage';
 @import 'servicesPage';
+@import 'paymentPage';
 @import 'errorPage';
 
 @import 'responsive';
-
-// Vendor

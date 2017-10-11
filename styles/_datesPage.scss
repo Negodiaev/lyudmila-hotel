@@ -9,5 +9,9 @@
       max-width: 100%;
       box-shadow: none;
     }
+    select {
+      max-width: 100%;
+      font-size: rem-calc(15);
+    }
   }
 }

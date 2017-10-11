@@ -73,6 +73,27 @@ svg {
   }
 }
 
+.radio {
+  @extend .checkbox;
+  & + label {
+    &:before {
+      width: rem-calc(24);
+      height: rem-calc(24);
+      font-size: rem-calc(30);
+      line-height: rem-calc(22);
+      font-weight: 700;
+      border-radius: 50%;
+    }
+  }
+  &:checked {
+    & + label {
+      &:before {
+        content: '\2022';
+      }
+    } 
+  }
+}
+
 .backgroundFull {
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,6 +135,15 @@ svg {
   &.bottomWhite {
     @include sectionBorder(bottom, $white);
   }
+}
+
+.tooltip{
+  font-weight: 600;
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.14);
+}
+
+.has-tip {
+  outline-color: transparent;
 }
 
 .spriteContainer {

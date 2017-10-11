@@ -1,20 +1,7 @@
 .servicesPage {
-  h1 {
-    &.title {
-      margin-bottom: rem-calc(25);
-    }
-  }
   .content {
     padding-top: rem-calc(45);
     padding-bottom: rem-calc(36);
-    h2 {
-      margin-bottom: rem-calc(15);
-      font-size: rem-calc(16);
-      &.costInfo {
-        margin-top: rem-calc(10);
-        margin-bottom: rem-calc(25);
-      }
-    }
     table {
       tr {
         background-color: $white;
@@ -47,18 +34,6 @@
     p {
       margin-bottom: rem-calc(14);
       font-size: rem-calc(13);
-    }
-    select {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: rem-calc(5);
-      margin-right: rem-calc(5);
-      max-width: rem-calc(110px);
-      height: rem-calc(50);
-      font-size: rem-calc(13);
-      background-image: url(images/svg-optimized/select-down.svg);
-      background-size: 1.57143rem;
-      background-position: right -.85714rem center;
     }
   }
   .contentItem {

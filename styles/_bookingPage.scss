@@ -1,0 +1,225 @@
+.bookingPage {
+  .content {
+    padding-bottom: rem-calc(30);
+    p {
+      line-height: unitless-calc(24, 15);
+    }
+    .showDetailsButton,
+    .showTariffsButton {
+      font-weight: 600;
+      outline-color: transparent;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .showDetailsButton {
+      margin-bottom: rem-calc(20);
+      font-size: rem-calc(14);
+      line-height: unitless-calc(19, 14);
+      color: $primary-color;
+      &.clicked {
+        margin-bottom: rem-calc(30);
+      }
+    }
+    .showTariffsButton {
+      position: relative;
+      top: rem-calc(-8);
+      margin-left: rem-calc(60);
+      font-size: rem-calc(13);
+      line-height: unitless-calc(19, 13);
+      color: $dark-gray;
+      &.clicked {
+        top: rem-calc(-3);
+      }
+    }
+  }
+  .apartments {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .apartment {
+    padding-bottom: 0;
+  }
+  .apartmentGallery {
+    margin-bottom: 0;
+    .apartmentThumbnail {
+      &.slick-slide {
+        height: rem-calc(70);
+      }
+    }
+  }
+  .apartmentContent {
+    padding-top: rem-calc(7);
+    padding-bottom: 0;
+  }
+  .apartmentInfo {
+    margin-top: rem-calc(25);
+    padding-right: 0;
+    &.expanded {
+      padding-bottom: rem-calc(20);
+    }
+  }
+  .apartmentDetails,
+  .tariffsDetails {
+    overflow: hidden;
+    &.opened {
+      height: auto;
+    }
+  }
+  .apartmentDetails {
+    height: rem-calc(48);
+    .description {
+      margin-top: 0;
+      margin-bottom: rem-calc(21);
+      max-width: 100%;
+    }
+  }
+  .facilities {
+    margin-top: rem-calc(10);
+    margin-bottom: rem-calc(7);
+    font-size: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: rem-calc(10);
+      width: rem-calc(48);
+      height: rem-calc(30);
+      font-size: 1rem;
+      line-height: unitless-calc(30);
+      text-align: center;
+    }
+    .icon {
+      vertical-align: middle;
+      max-width: rem-calc(50);
+      max-height: rem-calc(30);
+      fill: $primary-color;
+      &.wifi {
+        max-width: rem-calc(30);
+        max-height: rem-calc(21);
+      }
+      &.bed {
+        max-width: rem-calc(33);
+        max-height: rem-calc(25);
+      }
+      &.conditioner {
+        max-width: rem-calc(23);
+        max-height: rem-calc(25);
+      }
+      &.twoBed {
+        max-width: rem-calc(41);
+        max-height: rem-calc(26);
+      }
+      &.oneBed {
+        max-width: rem-calc(47);
+        max-height: rem-calc(27);
+        stroke: $primary-color;
+        fill: transparent;
+      }
+      &.sun {
+        max-width: rem-calc(30);
+        max-height: rem-calc(30);
+      }
+      &.cup {
+        max-width: rem-calc(28);
+        max-height: rem-calc(30);
+      }
+    }
+  }
+  .allFacilities {
+    margin: 0;
+    li {
+      display: table;
+      vertical-align: top;
+      margin-bottom: rem-calc(5);
+      width: 100%;
+      font-size: rem-calc(14);
+      line-height: unitless-calc(20, 14);
+    }
+    .imageWrap,
+    .text {
+      display: table-cell;
+    }
+    .imageWrap {
+      padding-right: rem-calc(4);
+      width: rem-calc(34);
+      text-align: center;  
+    }
+    .text {
+      padding-top: rem-calc(7);
+      padding-bottom: rem-calc(7);
+    }
+  }
+  .contentGallery {
+    margin-top: rem-calc(25);
+    margin-bottom: rem-calc(10);
+  }
+  .tariffsDetails {
+    height: rem-calc(40);
+  }
+  .tariffsList {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .tariff {
+    display: table;
+    vertical-align: middle;
+    margin-bottom: rem-calc(20);
+    width: 100%;
+    font-size: rem-calc(16);
+    line-height: 1;
+    background-image: radial-gradient(circle at 2px 2px, #ddd 2px, transparent 0, transparent 3px);
+    background-repeat: repeat-x;
+    background-size: 7px 3px;
+    background-position: 0 50%;
+    .item {
+      display: table-cell;
+      vertical-align: middle;
+      background-color: transparent;
+    }
+    .peoplesNumber {
+      font-size: 0;
+    }
+    .imageWrap,
+    .text,
+    .cost {
+      background-color: $white;
+    }
+    .imageWrap {
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: rem-calc(10);
+      width: rem-calc(60);
+    }
+    .text {
+      display: none;
+      padding-right: rem-calc(5);
+      font-size: rem-calc(20);
+    }
+    .cost {
+      padding-right: rem-calc(5);
+      width: rem-calc(90);
+    }
+    .buttonWrap {
+      width: rem-calc(110);
+    }
+    .button {
+      margin-bottom: 0;
+      padding: rem-calc(4) rem-calc(2);
+      width: 100%;
+      height: rem-calc(30);
+      font-size: rem-calc(10);
+    }
+  }
+  .showTariffsButton {
+    .clicked {
+      margin-bottom: rem-calc(40);
+    }
+  }
+  svg {
+    path {
+      fill: inherit;
+      stroke: inherit;
+    }
+  }
+}
