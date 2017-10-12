@@ -51,7 +51,10 @@
   position: relative;
   height: 100%;
   background-color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: grayscale(100%);
+  transition: filter .5s ease .1s, opacity .5s ease .1s; 
   &:after {
     content: '';
     position: absolute;
@@ -79,6 +82,7 @@
   }
   .placeTitle {
     margin-bottom: rem-calc(8);
+    font-size: rem-calc(20);
     line-height: unitless-calc(25, 20);
     font-weight: 700;
   }

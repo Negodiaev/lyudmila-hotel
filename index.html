@@ -18,10 +18,12 @@
             <a href="#" class="logo">
               <img src="images/logo_mobile.png" class="logoImageMobile" alt="">
             </a>
-            <div class="title">Отель Людмила</div>
+            <div class="title logoTitle text-center">
+              <span>Hotel</span> <span>Людмила</span>
+            </div>
             <div class="text-right">
               <div class="callbackMobileContainer">
-                <div class="title">8-922-64-38-795</div>
+                <a href="tel:+79226438795" class="title phone">8-922-64-38-795</a>
                 <a href="#" class="callback">Заказать звонок</a>
               </div>
               <a href="tel:+79226438795" class="callbackLink">
@@ -30,10 +32,9 @@
                 </svg>
               </a>
               <button id="menuIcon" class="menuIcon" type="button" data-toggle="headMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <i></i>
+                <i></i>
+                <i></i>
               </button>
             </div>
           </div>
@@ -67,7 +68,7 @@
         <!-- /.columns -->
         <div class="medium-4 large-3 large-offset-2 columns">
           <div class="float-right">
-            <div class="title">8-922-64-38-795</div>
+            <a href="tel:+79226438795" class="title phone">8-922-64-38-795</a>
             <a href="#" class="callback">Заказать звонок</a>
           </div>
           <!-- /.callback -->
@@ -81,95 +82,104 @@
   <!-- /.head -->
   <main id="main" class="main">
     <div id="heroSlider" class="hero slider withDots">
-      <div class="slide backgroundFull" style="background-image: url(images/hero/slide-1.jpg)">
-        <div class="slideContent">
-          <div class="row small-collapse large-uncollapse">
-            <div class="large-8 large-centered columns">
-              <div class="booking float-center">
-                <div class="row">
-                  <div class="column">
-                    <h2 class="title text-center">Бронирование номера</h2>
-                  </div>
-                </div>
-                <form>
-                  <div class="row">
-                    <div class="medium-6 columns">
-                      <label class="dateFieldContainer left">
-                        <input type="text" class="dateField" placeholder="Дата заезда">
-                      </label>
-                    </div>
-                    <!-- /.columns -->
-                    <div class="medium-6 columns">
-                      <label class="dateFieldContainer right">
-                        <input type="text" class="dateField" placeholder="Дата выезда">
-                      </label>
-                    </div>
-                    <!-- /.columns -->
-                  </div>
-                  <!-- /.row -->
-                  <div class="row">
-                    <div class="small-6 columns">
-                      <label>
-                        <select class="select peopleAmount adults">
-                          <option value="0" selected>Количество взрослых</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                      </label>
-                    </div>
-                    <!-- /.columns -->
-                    <div class="small-6 columns">
-                      <label>
-                        <select class="select peopleAmount children">
-                          <option value="0" selected>Количество детей</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                      </label>
-                    </div>
-                    <!-- /.columns -->
-                  </div>
-                  <!-- /.row -->
+      <div class="slide" style="background-image: url(images/hero/slide-1.jpg)">
+        <div class="slideInner">
+          <div class="slideContent">
+            <div class="row small-collapse large-uncollapse">
+              <div class="large-8 large-centered columns">
+                <div class="booking float-center">
                   <div class="row">
                     <div class="column">
-                      <button type="button" class="button float-center">Забронировать номер</button>
+                      <div class="sectionTitle title text-center">Бронирование номера</div>
                     </div>
                   </div>
-                </form>
+                  <form>
+                    <div class="row">
+                      <div class="medium-6 columns">
+                        <label class="dateFieldContainer left">
+                          <input type="text" class="dateField" placeholder="Дата заезда">
+                        </label>
+                      </div>
+                      <!-- /.columns -->
+                      <div class="medium-6 columns">
+                        <label class="dateFieldContainer right">
+                          <input type="text" class="dateField" placeholder="Дата выезда">
+                        </label>
+                      </div>
+                      <!-- /.columns -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                      <div class="small-6 columns">
+                        <label>
+                          <select class="select peopleAmount adults">
+                            <option value="0" selected>Количество взрослых</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </label>
+                      </div>
+                      <!-- /.columns -->
+                      <div class="small-6 columns">
+                        <label>
+                          <select class="select peopleAmount children">
+                            <option value="0" selected>Количество детей</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </label>
+                      </div>
+                      <!-- /.columns -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                      <div class="column">
+                        <button type="button" class="button float-center">Забронировать номер</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.booking -->
               </div>
-              <!-- /.booking -->
+              <!-- /.columns -->
             </div>
-            <!-- /.columns -->
+            <!-- /.row -->
           </div>
-          <!-- /.row -->
+          <!-- /.slideContent -->
         </div>
-        <!-- /.slideContent -->
+        <!-- /.slideInner -->
       </div>
       <!-- /.slide -->
-      <div class="slide backgroundFull" style="background-image: url(images/hero/slide-1.jpg)">
+      <div class="slide" style="background-image: url(images/hero/slide-1.jpg)">
+        <div class="slideInner">
+          <div class="slideContent">
+            <div class="row">
+              <div class="large-8 columns">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p>
+              </div>
+              <!-- /.columns -->
+              <div class="large-4 columns">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aperiam quam facilis inventore non illo vel commodi.</p>
+              </div>
+              <!-- /.columns -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.slideContent -->
+        </div>
+        <!-- /.slideInner -->
+      </div>
+      <!-- /.slide -->
+      <div class="slide" style="background-image: url(images/hero/slide-1.jpg)">
         <div class="slideContent">
-          <div class="row">
-            <div class="large-8 columns">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus necessitatibus nisi provident, laborum hic adipisci, explicabo nam vitae saepe quo voluptatibus quasi magni eligendi voluptate quos sapiente. Saepe doloremque perferendis consequuntur unde quasi nam nemo nisi odit, expedita quo voluptas aspernatur cumque laborum!</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptate explicabo cumque quaerat repellendus ducimus consectetur impedit, vel magni magnam autem, nemo necessitatibus? Vel excepturi dolor illum.</p>
-            </div>
-            <!-- /.columns -->
-            <div class="large-4 columns">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aperiam quam facilis inventore non illo vel commodi.</p>
-            </div>
-            <!-- /.columns -->
-          </div>
-          <!-- /.row -->
+          <img src="http://placehold.it/1280x800" alt="">
         </div>
         <!-- /.slideContent -->
-      </div>
-      <!-- /.slide -->
-      <div class="slide backgroundFull" style="background-image: url(images/hero/slide-1.jpg)">
-        <img src="http://placehold.it/1920x1280" alt="">
       </div>
       <!-- /.slide -->
     </div>
@@ -188,16 +198,16 @@
             </div>
             <div class="apartmentThumbnailsContainer">
               <div class="apartmentThumbnails thumbnails">
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/1.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/2.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/3.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/1.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/2.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/3.jpg)"></div>
               </div>
             </div>
           </div>
           <!-- /.apartmentGallery -->
           <div class="apartmentContent">
             <div class="apartmentInfo">
-              <h3 class="title"><a href="#" class="titleLink">Номер эконом</a></h3>
+              <div class="title"><a href="#" class="titleLink">Номер эконом</a></div>
               <p class="description">В лингвистике термин текст использу ется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р.</p>
             </div>
             <!-- /.apartmentInfo -->
@@ -221,16 +231,16 @@
             </div>
             <div class="apartmentThumbnailsContainer">
               <div class="apartmentThumbnails thumbnails">
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/2.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/3.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/1.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/2.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/3.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/1.jpg)"></div>
               </div>
             </div>
           </div>
           <!-- /.apartmentGallery -->
           <div class="apartmentContent">
             <div class="apartmentInfo">
-              <h3 class="title"><a href="#" class="titleLink">Номер стандарт</a></h3>
+              <div class="title"><a href="#" class="titleLink">Номер стандарт</a></div>
               <p class="description">В лингвистике термин текст использу ется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р.</p>
             </div>
             <!-- /.apartmentInfo -->
@@ -255,17 +265,17 @@
             </div>
             <div class="apartmentThumbnailsContainer">
               <div class="apartmentThumbnails thumbnails">
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/3.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/1.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/2.jpg)"></div>
-                <div class="apartmentThumbnail backgroundFull" style="background-image: url(images/apartments/2.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/3.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/1.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/2.jpg)"></div>
+                <div class="apartmentThumbnail" style="background-image: url(images/apartments/2.jpg)"></div>
               </div>
             </div>
           </div>
           <!-- /.apartmentGallery -->
           <div class="apartmentContent">
             <div class="apartmentInfo">
-              <h3 class="title"><a href="#" class="titleLink">Номер люкс</a></h3>
+              <div class="title"><a href="#" class="titleLink">Номер люкс</a></div>
               <p class="description">В лингвистике термин текст использу ется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р.</p>
             </div>
             <!-- /.apartmentInfo -->
@@ -283,9 +293,9 @@
     </div>
     <!-- /.apartments -->
     <div class="sectionBorder bottom"></div>
-    <div class="advantages backgroundFull" style="background-image: url(images/advantages/background.jpg)">
+    <div class="advantages" style="background-image: url(images/advantages/background.jpg)">
       <div class="column row">
-        <h2 class="sectionTitle text-center">Для всех посетителей</h2>
+        <div class="sectionTitle text-center">Для всех посетителей</div>
       </div>
       <!-- /.row -->
       <div class="row medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
@@ -295,7 +305,7 @@
               <svg class="icon paint">
                 <use xlink:href="#paint"></use>
               </svg>
-              <h5 class="title">Номера со свежим ремонтом</h5>
+              <div class="title">Номера со свежим ремонтом</div>
               <p class="description">Вас ждут чистые, современные номера с новой мебелью и сантехникой. Капитальный ремонт был произведен к летнему сезону 2017 года.</p>
             </div>
           </div>
@@ -307,7 +317,7 @@
               <svg class="icon food">
                 <use xlink:href="#food"></use>
               </svg>
-              <h5 class="title">Бесплатные завтраки</h5>
+              <div class="title">Бесплатные завтраки</div>
               <p class="description">Вкусные сытные завтраки и выгодные обеды для гостей отеля в соседнем уютном кафе &quot;Ветерок&quot;.</p>
             </div>
           </div>
@@ -319,7 +329,7 @@
               <svg class="icon star">
                 <use xlink:href="#star"></use>
               </svg>
-              <h5 class="title">Привилегии</h5>
+              <div class="title">Привилегии</div>
               <p class="description">В отеле действуют специальные предложения, акции и приятные сюрпризы для постоянных гостей</p>
             </div>
           </div>
@@ -331,7 +341,7 @@
               <svg class="icon alarmClock">
                 <use xlink:href="#alarm-clock"></use>
               </svg>
-              <h5 class="title">Круглосуточная регистрация с минимальной доплатой</h5>
+              <div class="title">Круглосуточная регистрация с минимальной доплатой</div>
               <p class="description">Вы можете не переживать, что приезжаете раньше времени заселения или задерживаетесь в пути. Заселим в любое время на выгодных условиях.</p>
             </div>
           </div>
@@ -343,7 +353,7 @@
               <svg class="icon wifi">
                 <use xlink:href="#wi-fi"></use>
               </svg>
-              <h5 class="title">Бесплатный WiFi</h5>
+              <div class="title">Бесплатный WiFi</div>
               <p class="description">Мы осознаем, как вам важно быть онлайн, поэтому постоянно улучшаем качество связи и скорость доступа к интернету. WiFi предоставляется всем гостям, круглосуточно и бесплатно.</p>
             </div>
           </div>
@@ -355,7 +365,7 @@
               <svg class="icon gift">
                 <use xlink:href="#gift"></use>
               </svg>
-              <h5 class="title">Подарки при заезде</h5>
+              <div class="title">Подарки при заезде</div>
               <p class="description">Мы с нетерпением ждем гостей, и специально для каждого готовим небольшие сюрпризы. В этом году при заезде в номер мы дарили корзину с фруктами и бутылку отличного местного вина.</p>
             </div>
           </div>
@@ -369,7 +379,7 @@
     <div class="about">
       <div class="row">
         <div class="large-6 columns">
-          <h2 class="sectionTitle">О нашем отеле</h2>
+        <div class="sectionTitle">О нашем отеле</div>
           <p>Отель &quot;Людмила&quot; расположен в спокойном районе Геленджика &quot;Тонкий мыс&quot;, удаленном от городской суеты и грохочущей музыки.</p>
           <p>До моря 5 минут ходьбы спокойным шагом, пляж – мелкая галька. Также в шаговой доступности вся необходимая инфраструктура курорта: набережная для пеших и велосипедных прогулок, кафе, столовая и рестораны, магазины, рынок, сувенирные лавочки, пункты предложения экскурсий, прокат велосипедов, остановка городских автобусов и такси. В 15 минутах езды на автобусе от отеля находится крупнейший аквапарк &quot;Золотая бухта&quot;, в 30 минутах центр города, в 10 минутах аэропорт.</p>
           <p>На территории отеля летняя терраса с искусственным водопадом, заплетенная виноградной лозой, в тени которой вы сможете отдохнуть и насладиться чашечкой ароматного кофе.</p>
@@ -413,9 +423,9 @@
     </div>
     <!-- /.about -->
     <div class="sectionBorder bottomWhite"></div>
-    <div class="feedback backgroundRepeat" style="background-image: url(images/feedback/background.jpg)">
+    <div class="feedback">
       <div class="column row">
-        <h2 class="sectionTitle text-center">Отзывы наших клиентов</h2>
+        <div class="sectionTitle text-center">Отзывы наших клиентов</div>
       </div>
       <!-- /.row -->
       <div class="column row">
@@ -439,7 +449,7 @@
                   <use xlink:href="#rating-star-active"></use>
                 </svg>
               </div>
-              <h5 class="title">Потрясающе!</h5>
+              <div class="title">Потрясающе!</div>
               <div class="feedbackText">
                 <div class="iconContainer">
                   <svg class="icon">
@@ -472,7 +482,7 @@
                   <use xlink:href="#rating-star"></use>
                 </svg>
               </div>
-              <h5 class="title">Потрясающе!</h5>
+              <div class="title">Потрясающе!</div>
               <div class="feedbackText">
                 <div class="iconContainer">
                   <svg class="icon">
@@ -505,7 +515,7 @@
                   <use xlink:href="#rating-star-active"></use>
                 </svg>
               </div>
-              <h5 class="title">Великолепный отель</h5>
+              <div class="title">Великолепный отель</div>
               <div class="feedbackText">
                 <div class="iconContainer">
                   <svg class="icon">
@@ -538,7 +548,7 @@
                   <use xlink:href="#rating-star-active"></use>
                 </svg>
               </div>
-              <h5 class="title">Пять звёзд!</h5>
+              <div class="title">Пять звёзд!</div>
               <div class="feedbackText">
                 <div class="iconContainer">
                   <svg class="icon">
@@ -562,14 +572,14 @@
     <div class="sectionBorder topWhite"></div>
     <div class="places">
       <div class="column row">
-        <h2 class="sectionTitle text-center">Сюда стоит сходить</h2>
+        <div class="sectionTitle text-center">Сюда стоит сходить</div>
       </div>
       <div class="column row">
         <div id="placesSlider" class="placesSlider slider withArrows withDots">
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/places/1.jpg)">
+            <div class="place" style="background-image: url(images/places/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -577,9 +587,9 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
+            <div class="place" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 2</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 2</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -587,9 +597,9 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
+            <div class="place" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 3</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 3</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -597,9 +607,9 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
+            <div class="place" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 4</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 4</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -607,9 +617,9 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
+            <div class="place" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 5</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 5</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -617,9 +627,9 @@
           </div>
           <!-- /.slide -->
           <div class="slide">
-            <div class="place backgroundFull" style="background-image: url(images/secondaryPage/1.jpg)">
+            <div class="place" style="background-image: url(images/secondaryPage/1.jpg)">
               <div class="info">
-                <h4 class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 6</a></h4>
+                <div class="placeTitle"><a href="#" class="placeTitleLink">Старый парк в Геленджике 6</a></div>
                 <p>В лингвистике термин текст используется в широком значении</p>
               </div>
             </div>
@@ -635,15 +645,11 @@
   </main>
   <!-- /.main -->
   <div class="sectionBorder bottomWhite"></div>
-  <div class="footer backgroundRepeat" style="background-image: url(images/footer/background.jpg)">
+  <div class="footer">
     <div class="row">
       <div class="bookingContainer large-6 large-push-6 columns">
         <div class="booking">
-          <div class="row">
-            <div class="column">
-              <h2 class="title">Бронирование номера</h2>
-            </div>
-          </div>
+          <div class="sectionTitle title">Бронирование номера</div>
           <form>
             <div class="row">
               <div class="medium-6 columns">
@@ -701,21 +707,17 @@
         </div>
         <!-- /.info -->
         <div class="callback">
-          <div class="phone">89226438795</div>
+          <a href="tel:+79226438795" class="phone">89226438795</a>
           <a href="#">Заказать звонок</a>
         </div>
         <div class="address">г. Геленджик, ул. Пограничная 1А</div>
         <a href="#">Посмотреть на карте</a>
         <ul class="scl menu">
           <li><a href="#">
-            <svg class="icon">
-              <use xlink:href="#vk"></use>
-            </svg>
+            <img src="images/icon_v-k.png" alt="">
           </a></li>
           <li><a href="#">
-            <svg class="icon">
-              <use xlink:href="#vk-2"></use>
-            </svg>
+            <img src="images/icon_booking.png" alt="">
           </a></li>
         </ul>
       </div>

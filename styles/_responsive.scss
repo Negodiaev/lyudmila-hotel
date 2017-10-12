@@ -1,9 +1,30 @@
 @include breakpoint(small only) {
+  // Base
+  .sectionTitle {
+    font-size: rem-calc(20);
+    line-height: unitless-calc(28, 20);
+  }
+
   // Head
   .head {
     .title {
       margin: 0 auto 0 rem-calc(10);
       font-size: rem-calc(16);
+    }
+    .logoTitle {
+      max-width: rem-calc(110);
+      font-weight: 700;
+      span {
+        &:first-child {
+          text-transform: uppercase;
+          font-size: rem-calc(12);
+        }
+        &:last-child {
+          font-size: rem-calc(18);
+          line-height: 1;
+          color: $primary-color;
+        }
+      }
     }
   }
   .headTop {
@@ -17,12 +38,42 @@
     }
   }
 
+  // Apartment
+  .apartmentInfo {
+    font-size: rem-calc(19);
+    line-height: unitless-calc(27, 19);
+  }
+
+  // Advantages
+  .advantage {
+    .title {
+      font-size: rem-calc(14);
+      line-height: unitless-calc(19, 14);
+    }
+  }
+
   // About
   .mapContainer {
     margin: 0 rem-calc(-10);
     &.thumbnail {
       border: 0;
       box-shadow: none;
+    }
+  }
+
+  // Feedback
+  .feedbackItem {
+    .title {
+      font-size: rem-calc(14);
+      line-height: unitless-calc(23, 14);
+    }
+  }
+
+  // Places
+  .place {
+    .placeTitle {
+      font-size: rem-calc(16);
+      line-height: unitless-calc(22, 16);
     }
   }
 
@@ -209,7 +260,7 @@
   }
   .apartmentInfo {
     .title {
-      margin-bottom: rem-calc(30);
+      margin-bottom: rem-calc(28);
     }
   }
 
@@ -374,6 +425,13 @@
         line-height: unitless-calc(25, 22);
       }
     }
+    .apartmentInfo {
+      .title {
+        margin-bottom: rem-calc(18);
+        font-size: rem-calc(22);
+        line-height: unitless-calc(28, 22);
+      }
+    }
   }
   
 
@@ -396,8 +454,12 @@
     &.slider {
       .slide {
         position: relative;
-        padding: rem-calc(120) 0;
         height: rem-calc(586);
+      }
+      .slideInner {
+        position: relative;
+        padding: rem-calc(120) 0;
+        height: 100%;
       }
       .slideContent {
         position: absolute;
@@ -503,7 +565,7 @@
   // Advantages
   .advantages {
     padding-top: rem-calc(70);
-    padding-bottom: rem-calc(80);
+    padding-bottom: rem-calc(74);
     .sectionTitle {
       margin-bottom: rem-calc(70);
     }
@@ -675,9 +737,6 @@
         margin-left: rem-calc(100);
       }
     }
-    .apartments {
-      // padding-bottom: rem-calc(40);
-    }
     .apartment {
       margin-bottom: rem-calc(20);
       padding-bottom: rem-calc(5);
@@ -696,14 +755,13 @@
     }
     .apartmentInfo {
       margin-top: rem-calc(15);
-      vertical-align: top; // to remove
       padding-right: rem-calc(10);
       &.expanded {
         padding-bottom: rem-calc(52);
       }
     }
     .facilities {
-      margin-top: rem-calc(22);
+      margin-top: rem-calc(15);
       li {
         margin-bottom: 0;
         width: rem-calc(68);
@@ -782,6 +840,13 @@
     padding-right: rem-calc(20);
     .author {
       margin-top: rem-calc(43);
+    }
+  }
+
+  // Footer
+  .footer {
+    .booking {
+      padding-right: rem-calc(40);
     }
   }
 
@@ -885,7 +950,7 @@
         }
       }
       .booking {
-        padding: rem-calc(80) rem-calc(100) rem-calc(60);
+        padding: rem-calc(80) rem-calc(110) rem-calc(60);
         .dateField {
           margin-bottom: rem-calc(42);
         }

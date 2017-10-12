@@ -1,5 +1,7 @@
 .feedback {
   padding: rem-calc(40) 0;
+  background-image: url(images/feedback/background.jpg);
+  background-repeat: repeat;
   .sectionTitle {
     margin-bottom: rem-calc(30);
   }
@@ -52,6 +54,9 @@
     line-height: unitless-calc(25, 15);
   }
   .title {
+    margin-bottom: rem-calc(6);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(25, 15);
     font-weight: 700;
   }
   p {

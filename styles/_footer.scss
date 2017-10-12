@@ -1,5 +1,7 @@
 .footer {
   padding: rem-calc(41) 0;
+  background-image: url(images/footer/background.png);
+  background-repeat: repeat;
   color: $white;
   a {
     font-size: rem-calc(15);
@@ -22,7 +24,7 @@
     overflow: hidden;
   }
   .booking {
-    margin: 0 rem-calc(-20) rem-calc(40);
+    margin-bottom: rem-calc(40);
     padding: 0;
     background-color: transparent;
     box-shadow: none;
@@ -57,9 +59,5 @@
   }
   a {
     padding: 0;
-  }
-  .icon {
-    width: rem-calc(50);
-    height: rem-calc(50);
   }
 }

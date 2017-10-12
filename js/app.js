@@ -175,11 +175,13 @@ $(document).ready(function() {
     arrows: false,
     dots: true,
     dotsClass: 'dots',
+    speed: 0,
     responsive: [{
       breakpoint: 640,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        speed: 0
       }
     }, {
       breakpoint: 1023,
@@ -193,6 +195,7 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="arrow next">&#8250;</button>',
         appendArrows: $('#placesSlider .place'),
         dots: false,
+        speed: 0,
         // draggable: false
       }
     }]

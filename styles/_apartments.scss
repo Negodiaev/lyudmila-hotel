@@ -15,6 +15,8 @@
     margin: 0;
   }
   .apartmentThumbnail {
+    background-repeat: no-repeat;
+    background-size: cover;
     &.slick-slide {
       position: relative;
       margin: rem-calc(3);
@@ -77,13 +79,15 @@
 .apartmentBooking {
   margin-top: rem-calc(15);
   margin-bottom: rem-calc(15);
-
 }
 
 .apartmentInfo {
   padding-right: rem-calc(20);
   .title {
     margin-bottom: rem-calc(10);
+    font-size: rem-calc(22);
+    line-height: unitless-calc(30, 22);
+    font-weight: 600;
   }
   .titleLink {
     color: $black;

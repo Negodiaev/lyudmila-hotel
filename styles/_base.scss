@@ -38,6 +38,12 @@ svg {
   }
 }
 
+.sectionTitle {
+  font-size: rem-calc(25);
+  line-height: unitless-calc(35, 25);
+  font-weight: 600;
+}
+
 .checkbox {
   position: absolute;
   left: -9999px;
@@ -94,9 +100,13 @@ svg {
   }
 }
 
-.backgroundFull {
-  background-repeat: no-repeat;
-  background-size: cover;
+.phone {
+  display: block;
+  text-decoration: none;
+  color: $body-font-color;
+  &:hover {
+    color: inherit;
+  }
 }
 
 .backgroundRepeat {

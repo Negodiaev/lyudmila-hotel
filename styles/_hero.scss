@@ -2,21 +2,22 @@
   &.slider {
     .slide {
       background-position: 50% 0;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .dots {
       bottom: rem-calc(15);
+    }
+    img {
+      width: 100%;
     }
   }
 }
 
 .booking {
-  padding: rem-calc(40) 0 rem-calc(50);
+  padding: rem-calc(40) rem-calc(10) rem-calc(50);
   background-color: rgba(white, .8);
   box-shadow: 0 9px 9px rgba(0, 0, 0, 0.19);
-  .row {
-    margin-left: rem-calc(10);
-    margin-right: rem-calc(10);
-  }
   .title {
     margin-bottom: rem-calc(30);
   }

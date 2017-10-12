@@ -1,6 +1,8 @@
 .advantages {
   padding: rem-calc(40) 0;
   background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   .sectionTitle {
     margin-bottom: rem-calc(40);
   }
@@ -15,6 +17,9 @@
   border: 1px solid #ebebeb;
   background-color: rgba($white, .61);
   .title {
+    margin-bottom: rem-calc(10);
+    font-size: rem-calc(15);
+    line-height: unitless-calc(21, 15);
     font-weight: 700;
   }
 }

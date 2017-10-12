@@ -30,11 +30,11 @@
   position: relative;
   vertical-align: middle;
   width: 26px;
-  height: 26px;
+  height: 22px;
   outline-color: transparent;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  span {
+  i {
     display: block;
     position: absolute;
     left: 0;
@@ -48,31 +48,26 @@
     &:first-child {
       top: 0;
     }
-    &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(2){
       top: 9px;
     }
-    &:nth-child(4) {
+    &:nth-child(3) {
       top: 18px;
     }
   }
   &.open {
-    span {
+    i {
       &:first-child {
-        top: 18px;
-        left: 50%;
-        width: 0;
+        top: rem-calc(9);
+        transform: rotate(135deg);
       }
       &:nth-child(2) {
-        transform: rotate(45deg);
+        left: rem-calc(-30);
+        opacity: 0;
       }
       &:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-      &:nth-child(4) {
-        top: 18px;
-        left: 50%;
-        width: 0;
+        top: rem-calc(9);
+        transform: rotate(-135deg);
       }
     }
   }
@@ -112,7 +107,7 @@
 
 .logo {
   display: block;
-  max-width: rem-calc(40);
+  max-width: rem-calc(44);
 }
 
 .callbackMobileContainer {

@@ -59,6 +59,10 @@
     &.expanded {
       padding-bottom: rem-calc(20);
     }
+    .title {
+      font-size: rem-calc(18);
+      line-height: unitless-calc(24, 16);
+    }
   }
   .apartmentDetails,
   .tariffsDetails {
