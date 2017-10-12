@@ -351,6 +351,13 @@
       }
     }
   }
+  .contentGallery {
+    margin-top: rem-calc(40);
+    margin-bottom: rem-calc(27);
+    .column-block {
+      margin-bottom: rem-calc(25);
+    }
+  }
   .errorPage {
     .errorContentItem {
       display: table;

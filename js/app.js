@@ -45,7 +45,8 @@ $(document).ready(function() {
   apartmentsList.each(function(index) {
     var apartment = $(this),
         thumbnails = apartment.find('.apartmentThumbnails'),
-        photo = apartment.find('.apartmentPhoto');
+        photo = apartment.find('.apartmentPhoto'),
+        galleryLink = photo.find('a');
 
     thumbnails.slick({
       mobileFirst: true,
@@ -85,10 +86,12 @@ $(document).ready(function() {
         }
       }]
     });
+
+    galleryLink.colorbox({ rel: 'apartmentsGalleryGroup-' + index });
   });
 
   // Apartment gallery
-  $('.apartmentPhoto a').colorbox({ rel: 'apartmentsGalleryGroup' });
+  // $('.apartmentPhoto a').colorbox({ rel: 'apartmentsGalleryGroup' });
 
   // About slider
   $('#aboutSlider').slick({
